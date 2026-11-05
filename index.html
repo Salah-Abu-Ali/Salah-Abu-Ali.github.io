@@ -3,25 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salah Abu Ali — Game Developer, Mathematician &amp; Fabricator</title>
-  <meta name="description" content="Portfolio of Salah Abu Ali: Game Developer, Mathematician (B.Sc. 2022), and Maker based in Amman, Jordan. Creator of PuzzleMe, 3ds Max 3D artist since 2010, and math educator @MathPiSalah.">
+  <title>Salah Abu Ali — Game Developer &amp; Mathematician</title>
+  <meta name="description" content="Personal portfolio of Salah Abu Ali. Game developer, mathematician (B.Sc. 2022), 3D artist, and maker based in Amman, Jordan. Creator of PuzzleMe.">
   
-  <!-- Open Graph / WhatsApp / Facebook Preview -->
+  <!-- Open Graph / Social Previews -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://salah-abu-ali.github.io/">
-  <meta property="og:title" content="Salah Abu Ali — Game Developer, Mathematician &amp; Fabricator">
-  <meta property="og:description" content="Game Developer (Unity C#), Mathematician (B.Sc. 2022), and Maker in Amman, Jordan. Creator of PuzzleMe & math educator @MathPiSalah.">
-  <meta property="og:image" content="https://puzzlemejo.github.io/og-image.png">
+  <meta property="og:title" content="Salah Abu Ali — Game Developer &amp; Mathematician">
+  <meta property="og:description" content="Game Developer (Unity/C#), Mathematician (B.Sc. 2022), and Maker based in Amman, Jordan. Creator of PuzzleMe & math educator @MathPiSalah.">
   
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Salah Abu Ali — Game Developer, Mathematician &amp; Fabricator">
-  <meta name="twitter:description" content="Game Developer (Unity C#), Mathematician (B.Sc. 2022), and Maker in Amman, Jordan. Creator of PuzzleMe & math educator @MathPiSalah.">
-  
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -30,689 +24,357 @@
 
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'monospace'],
-            serif: ['"Instrument Serif"', 'serif'],
           }
         }
       }
     }
   </script>
-
-  <style>
-    ::selection {
-      background-color: #ffffff;
-      color: #000000;
-    }
-    .math-grid {
-      background-size: 32px 32px;
-      background-image: 
-        linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-    }
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 6px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background: #0a0a0a;
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: #27272a;
-      border-radius: 3px;
-    }
-  </style>
 </head>
-<body class="bg-[#09090b] text-zinc-100 font-sans antialiased selection:bg-white selection:text-black custom-scrollbar min-h-screen">
+<body class="bg-[#111113] text-zinc-200 font-sans leading-relaxed selection:bg-zinc-800 selection:text-white min-h-screen">
 
-  <!-- Header / Navigation -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-[#09090b]/85 backdrop-blur-md border-b border-white/10">
-    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#" class="flex items-center gap-2 group">
-        <span class="font-mono text-sm tracking-wider font-semibold group-hover:text-zinc-400 transition-colors">
-          SALAH ABU ALI<span class="text-zinc-500 font-normal">.dev</span>
-        </span>
+  <!-- Top Navigation -->
+  <header class="border-b border-zinc-800/80 bg-[#111113]/90 backdrop-blur sticky top-0 z-30">
+    <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="font-semibold text-white tracking-tight hover:text-zinc-300 transition-colors">
+        Salah Abu Ali
       </a>
-
-      <nav class="hidden md:flex items-center gap-6 text-xs font-mono uppercase tracking-wider text-zinc-400">
-        <a href="#magnum-opus" class="hover:text-white transition-colors">PuzzleMe</a>
-        <a href="#story" class="hover:text-white transition-colors">Story</a>
-        <a href="#lab" class="hover:text-white transition-colors">Math Lab</a>
-        <a href="#craft" class="hover:text-white transition-colors">Pillars</a>
+      
+      <nav class="flex items-center gap-5 text-sm text-zinc-400">
+        <a href="#work" class="hover:text-white transition-colors">Work</a>
+        <a href="#about" class="hover:text-white transition-colors">About</a>
         <a href="#contact" class="hover:text-white transition-colors">Contact</a>
-      </nav>
-
-      <div class="flex items-center gap-1.5 sm:gap-2">
-        <a href="https://wa.me/962789423717" target="_blank" rel="noopener" class="p-2 text-zinc-400 hover:text-emerald-400 hover:bg-white/5 rounded transition-all" title="WhatsApp (+962789423717)">
+        <a href="https://wa.me/962789423717" target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300 font-medium transition-colors flex items-center gap-1">
           <i data-lucide="message-circle" class="w-4 h-4"></i>
+          <span class="hidden sm:inline">WhatsApp</span>
         </a>
-        <a href="https://www.facebook.com/SalahAlDin.AbuAli" target="_blank" rel="noopener" class="p-2 text-zinc-400 hover:text-blue-400 hover:bg-white/5 rounded transition-all" title="Facebook">
-          <i data-lucide="facebook" class="w-4 h-4"></i>
-        </a>
-        <a href="https://www.youtube.com/@MathPiSalah" target="_blank" rel="noopener" class="p-2 text-zinc-400 hover:text-red-400 hover:bg-white/5 rounded transition-all" title="YouTube @MathPiSalah">
-          <i data-lucide="youtube" class="w-4 h-4"></i>
-        </a>
-        <a href="https://www.instagram.com/mathpisalah/" target="_blank" rel="noopener" class="p-2 text-zinc-400 hover:text-pink-400 hover:bg-white/5 rounded transition-all" title="Instagram @mathpisalah">
-          <i data-lucide="instagram" class="w-4 h-4"></i>
-        </a>
-        <a href="https://github.com/Salah-Abu-Ali" target="_blank" rel="noopener" class="p-2 text-zinc-400 hover:text-white hover:bg-white/5 rounded transition-all" title="GitHub">
-          <i data-lucide="github" class="w-4 h-4"></i>
-        </a>
-        <a href="#contact" class="hidden sm:inline-flex text-xs font-mono bg-white text-black px-3.5 py-1.5 rounded font-medium hover:bg-zinc-200 transition-all items-center gap-1.5 shadow-sm ml-1">
-          <span>Get in touch</span>
-        </a>
-      </div>
+      </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 border-b border-white/10 math-grid overflow-hidden">
-    <div class="max-w-6xl mx-auto px-6 relative z-10">
-      
-      <!-- Badges bar -->
-      <div class="flex flex-wrap items-center gap-2.5 mb-8 text-xs font-mono">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-black/60 backdrop-blur">
-          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-          <span class="text-zinc-300">Amman, Jordan &bull; Open for Remote Projects</span>
-        </div>
+  <!-- Main Content Container -->
+  <main class="max-w-3xl mx-auto px-6 py-14 space-y-20">
 
+    <!-- Hero / Intro -->
+    <section class="space-y-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">
+        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+        <span>Based in Amman, Jordan &bull; Open for Remote Projects</span>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-7">
-          <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.08] mb-6">
-            Pure mathematics. <br/>
-            <span class="font-serif italic font-normal text-zinc-300">Playable</span> worlds.
-          </h1>
-          <p class="text-base sm:text-lg text-zinc-300 leading-relaxed max-w-2xl mb-4 font-light">
-            I am <strong class="text-white font-semibold">Salah Abu Ali</strong> (born 1998, 28 years old), a Game Developer, Mathematician (B.Sc. 2022), and Maker based in Amman, Jordan.
-          </p>
-          <p class="text-sm sm:text-base text-zinc-400 leading-relaxed max-w-2xl mb-8 font-light">
-            I learned 3D design from books at age 12, took 3rd place in my first professional game contest in 2018, and completed my degree in pure mathematics. Today, I translate advanced geometry and fractal algorithms into both commercial digital games and industrial CO2 laser-cut wooden craft.
-          </p>
+      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-white leading-tight">
+        Game Developer, Mathematician &amp; Maker.
+      </h1>
 
-          <div class="flex flex-wrap items-center gap-3 text-xs font-mono">
-            <a href="#magnum-opus" class="px-5 py-3 rounded bg-white text-black font-semibold hover:bg-zinc-200 transition-colors flex items-center gap-2">
-              <i data-lucide="puzzle" class="w-4 h-4"></i>
-              <span>Discover PuzzleMe</span>
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.ZaytuneGames.Puzzleme&hl=en" target="_blank" rel="noopener" class="px-4 py-3 rounded border border-white/20 hover:border-white/50 text-white transition-colors flex items-center gap-2">
-              <i data-lucide="play" class="w-3.5 h-3.5 text-emerald-400"></i>
-              <span>Google Play Demo</span>
-            </a>
-            <a href="#lab" class="px-4 py-3 rounded border border-white/10 text-zinc-300 hover:text-white hover:border-white/30 transition-colors flex items-center gap-2">
-              <i data-lucide="sparkles" class="w-3.5 h-3.5"></i>
-              <span>Interactive Math Lab</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Interactive Canvas Card -->
-        <div class="lg:col-span-5">
-          <div class="border border-white/10 bg-zinc-950/85 rounded-xl p-4 shadow-2xl backdrop-blur relative">
-            <div class="flex items-center justify-between pb-3 border-b border-white/10 mb-3 text-xs font-mono text-zinc-400">
-              <span class="flex items-center gap-2">
-                <span class="inline-block w-2 h-2 rounded-full bg-emerald-400/70"></span>
-                harmonic_vector_field.c
-              </span>
-              <span class="text-zinc-500 text-[10px]">Interact with cursor</span>
-            </div>
-            
-            <div class="relative w-full aspect-square rounded-lg overflow-hidden bg-black border border-white/5 cursor-crosshair">
-              <canvas id="heroCanvas" class="w-full h-full block"></canvas>
-              <div class="absolute bottom-2 left-2 text-[10px] font-mono text-zinc-500 bg-black/70 px-2 py-0.5 rounded backdrop-blur">
-                f(x, y) = &nabla;&Phi;(r) &middot; cos(&omega;t)
-              </div>
-            </div>
-            
-            <div class="pt-3 text-[11px] font-mono text-zinc-500 flex justify-between items-center">
-              <span>Dynamic Kinematic Field</span>
-              <button id="resetFieldBtn" class="hover:text-zinc-300 underline underline-offset-2">Reset field</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Metric Strip -->
-  <section class="border-b border-white/10 bg-zinc-950">
-    <div class="max-w-6xl mx-auto px-6 py-8">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 font-mono text-xs">
-        <div class="border-l border-white/10 pl-4">
-          <div class="text-zinc-500 uppercase tracking-widest text-[10px] mb-1">Experience</div>
-          <div class="text-sm font-semibold text-white">14+ Yrs 3D (Since 2010)</div>
-          <div class="text-[11px] text-zinc-500">8+ Yrs Game Dev (2018)</div>
-        </div>
-        <div class="border-l border-white/10 pl-4">
-          <div class="text-zinc-500 uppercase tracking-widest text-[10px] mb-1">Education</div>
-          <div class="text-sm font-semibold text-white">B.Sc. Mathematics</div>
-          <div class="text-[11px] text-zinc-500">Graduated Jan 2022</div>
-        </div>
-        <div class="border-l border-white/10 pl-4">
-          <div class="text-zinc-500 uppercase tracking-widest text-[10px] mb-1">Accolades</div>
-          <div class="text-sm font-semibold text-white">3rd Place Award</div>
-          <div class="text-[11px] text-zinc-500">Pocket Gamer Pitch '18</div>
-        </div>
-        <div class="border-l border-white/10 pl-4">
-          <div class="text-zinc-500 uppercase tracking-widest text-[10px] mb-1">Fabrication</div>
-          <div class="text-sm font-semibold text-white">CO2 Laser &amp; Wood</div>
-          <div class="text-[11px] text-zinc-500">Workshop Co-Owner</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Magnum Opus Spotlight: PuzzleMe -->
-  <section id="magnum-opus" class="py-24 border-b border-white/10 math-grid">
-    <div class="max-w-6xl mx-auto px-6">
-      
-      <div class="flex items-center gap-2 mb-2 text-xs font-mono uppercase tracking-widest text-zinc-500">
-        <i data-lucide="crown" class="w-4 h-4 text-amber-400"></i>
-        <span>Magnum Opus</span>
-      </div>
-      <h2 class="text-3xl sm:text-5xl font-bold tracking-tight text-white mb-6">
-        PuzzleMe: A Fractal-Based Jigsaw Universe
-      </h2>
-      <p class="text-base sm:text-lg text-zinc-400 font-light max-w-3xl leading-relaxed mb-12">
-        <strong class="text-zinc-200 font-medium">PuzzleMe</strong> represents the ultimate synthesis of my skills: advanced recursive mathematics, custom Unity engine programming, and physical industrial laser craftsmanship.
+      <p class="text-base sm:text-lg text-zinc-300 font-light leading-relaxed">
+        Hi, I'm <strong class="text-white font-medium">Salah</strong> (28, born 1998). I build video games with <strong class="text-white font-medium">Unity and C#</strong>, apply my <strong class="text-white font-medium">degree in mathematics</strong> to simulations and game physics, and run a physical woodworking &amp; CO2 laser fabrication workshop with my brother in Amman.
       </p>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        
-        <!-- Left: Digital Game Card -->
-        <div class="lg:col-span-7 border border-white/10 bg-[#0c0c0e] rounded-xl p-8 flex flex-col justify-between hover:border-white/20 transition-all">
-          <div>
-            <div class="flex items-center justify-between text-xs font-mono text-zinc-500 mb-4">
-              <span class="px-2.5 py-1 bg-white/5 rounded border border-white/10 text-white font-medium">DIGITAL GAME (UNITY / C#)</span>
-              <span>Available on Android</span>
-            </div>
-            
-            <h3 class="text-2xl sm:text-3xl font-bold text-white mb-3">
-              Mathematical Fractal Jigsaw Engine
-            </h3>
-            
-            <p class="text-sm text-zinc-300 font-light leading-relaxed mb-6">
-              Instead of standard interlocking tabs, PuzzleMe generates jigsaw puzzle pieces using <strong>recursive fractal curves</strong> and non-trivial geometric subdivision. Every piece behaves as a unique topological tile, requiring a custom deterministic state engine, procedural mesh generation, and optimized 2D spatial partitioning to maintain 60 FPS on mobile hardware.
-            </p>
-
-            <div class="grid grid-cols-2 gap-4 font-mono text-xs mb-8">
-              <div class="p-3 bg-zinc-950 border border-white/5 rounded">
-                <span class="text-zinc-500 block text-[10px]">ALGORITHM</span>
-                <span class="text-zinc-200 font-medium">Recursive Fractal Subdivision</span>
-              </div>
-              <div class="p-3 bg-zinc-950 border border-white/5 rounded">
-                <span class="text-zinc-500 block text-[10px]">ENGINE</span>
-                <span class="text-zinc-200 font-medium">Unity C# &amp; Custom Shaders</span>
-              </div>
-              <div class="p-3 bg-zinc-950 border border-white/5 rounded">
-                <span class="text-zinc-500 block text-[10px]">STUDIO</span>
-                <span class="text-zinc-200 font-medium">Zaytune Games</span>
-              </div>
-              <div class="p-3 bg-zinc-950 border border-white/5 rounded">
-                <span class="text-zinc-500 block text-[10px]">STATUS</span>
-                <span class="text-emerald-400 font-medium">Early Access Demo Live</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex flex-wrap items-center gap-3 pt-6 border-t border-white/10 font-mono text-xs">
-            <a href="https://play.google.com/store/apps/details?id=com.ZaytuneGames.Puzzleme&hl=en" target="_blank" rel="noopener" class="px-5 py-3 rounded bg-white text-black font-semibold hover:bg-zinc-200 transition-colors flex items-center gap-2">
-              <i data-lucide="download" class="w-4 h-4"></i>
-              <span>Play on Google Play</span>
-            </a>
-            <span class="text-zinc-500 text-[11px]">com.ZaytuneGames.Puzzleme</span>
-          </div>
+      <!-- Key quick highlights -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm text-zinc-300 font-mono">
+        <div class="p-3 rounded-lg bg-zinc-900/50 border border-zinc-800/80 flex items-center gap-3">
+          <i data-lucide="gamepad-2" class="w-4 h-4 text-zinc-400 shrink-0"></i>
+          <span>Game Dev since 2018 (Unity)</span>
         </div>
+        <div class="p-3 rounded-lg bg-zinc-900/50 border border-zinc-800/80 flex items-center gap-3">
+          <i data-lucide="graduation-cap" class="w-4 h-4 text-zinc-400 shrink-0"></i>
+          <span>B.Sc. Mathematics (Jan 2022)</span>
+        </div>
+        <div class="p-3 rounded-lg bg-zinc-900/50 border border-zinc-800/80 flex items-center gap-3">
+          <i data-lucide="box" class="w-4 h-4 text-zinc-400 shrink-0"></i>
+          <span>3ds Max 3D artist since 2010</span>
+        </div>
+        <div class="p-3 rounded-lg bg-zinc-900/50 border border-zinc-800/80 flex items-center gap-3">
+          <i data-lucide="hammer" class="w-4 h-4 text-zinc-400 shrink-0"></i>
+          <span>CO2 Laser Workshop Co-Owner</span>
+        </div>
+      </div>
 
-        <!-- Right: Physical Craft & Laser Machine -->
-        <div class="lg:col-span-5 border border-white/10 bg-[#0c0c0e] rounded-xl p-8 flex flex-col justify-between hover:border-white/20 transition-all">
-          <div>
-            <div class="flex items-center justify-between text-xs font-mono text-zinc-500 mb-4">
-              <span class="px-2.5 py-1 bg-amber-500/10 text-amber-300 rounded border border-amber-500/20 font-medium">PHYSICAL FABRICATION</span>
-              <span>Amman Workshop</span>
-            </div>
+      <!-- Quick action links -->
+      <div class="flex flex-wrap items-center gap-3 pt-4 text-sm">
+        <a href="#contact" class="px-4 py-2 rounded-md bg-white text-black font-medium hover:bg-zinc-200 transition-colors">
+          Get in touch
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.ZaytuneGames.Puzzleme&hl=en" target="_blank" rel="noopener" class="px-4 py-2 rounded-md bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white transition-colors flex items-center gap-2">
+          <i data-lucide="play" class="w-4 h-4 text-emerald-400"></i>
+          <span>Try PuzzleMe Demo</span>
+        </a>
+        <a href="https://wa.me/962789423717" target="_blank" rel="noopener" class="px-4 py-2 rounded-md bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white transition-colors flex items-center gap-2">
+          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+          <span>WhatsApp Chat</span>
+        </a>
+      </div>
+    </section>
 
-            <h3 class="text-2xl font-bold text-white mb-3">
-              PuzzleMe JO: Laser Woodcraft
-            </h3>
+    <!-- Work / Projects Section -->
+    <section id="work" class="space-y-8">
+      <div>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-2">Featured Work</h2>
+        <p class="text-sm text-zinc-400">Games, commercial tools, and physical craftsmanship.</p>
+      </div>
 
-            <p class="text-sm text-zinc-300 font-light leading-relaxed mb-6">
-              With my brother, I co-own a specialized woodworking and digital fabrication studio in Amman equipped with an industrial CO2 laser cutting machine. We turned the digital fractal jigsaw algorithms into tactile, high-precision wooden art pieces.
-            </p>
+      <div class="space-y-6">
 
-            <ul class="space-y-2.5 font-mono text-xs text-zinc-400 mb-8">
-              <li class="flex items-start gap-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
-                <span>Vector precision in Illustrator, LightBurn, &amp; 3ds Max</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
-                <span>Micron-accurate CO2 laser kerf compensation</span>
-              </li>
-              <li class="flex items-start gap-2">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-400 shrink-0 mt-0.5"></i>
-                <span>Hand-finished natural hardwoods and organic puzzle textures</span>
-              </li>
-            </ul>
+        <!-- Project 1: PuzzleMe Digital -->
+        <article class="p-6 rounded-xl bg-zinc-900/40 border border-zinc-800 space-y-4 hover:border-zinc-700 transition-colors">
+          <div class="flex items-center justify-between text-xs font-mono text-zinc-500">
+            <span class="text-emerald-400 font-medium">FLAGSHIP GAME &bull; UNITY / C#</span>
+            <span>Android &bull; Zaytune Games</span>
           </div>
 
-          <div class="pt-6 border-t border-white/10 font-mono text-xs flex items-center justify-between">
-            <a href="https://puzzlemejo.github.io/" target="_blank" rel="noopener" class="text-white hover:underline flex items-center gap-1.5 font-medium">
-              <span>Visit PuzzleMe JO Store</span>
+          <h3 class="text-xl font-bold text-white">
+            PuzzleMe: Fractal Jigsaw Puzzle
+          </h3>
+
+          <p class="text-sm text-zinc-300 leading-relaxed font-light">
+            My magnum opus and most complex project to date. Unlike standard jigsaw puzzles with simple tabs, PuzzleMe uses <strong>recursive fractal curves</strong> to generate completely unique, mathematically interlocking puzzle pieces. Built with Unity, C#, and custom shaders, optimized for smooth performance on mobile devices.
+          </p>
+
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-400">
+            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Fractal Geometry</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Unity C#</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Custom Shaders</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Procedural Generation</span>
+          </div>
+
+          <div class="pt-2 flex items-center gap-4 text-sm font-medium">
+            <a href="https://play.google.com/store/apps/details?id=com.ZaytuneGames.Puzzleme&hl=en" target="_blank" rel="noopener" class="text-white hover:underline flex items-center gap-1">
+              <span>View on Google Play</span>
               <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
             </a>
-            <a href="https://instagram.com/puzzleme.jo/" target="_blank" rel="noopener" class="text-zinc-400 hover:text-white flex items-center gap-1">
-              <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
+          </div>
+        </article>
+
+        <!-- Project 2: PuzzleMe JO Physical Workshop -->
+        <article class="p-6 rounded-xl bg-zinc-900/40 border border-zinc-800 space-y-4 hover:border-zinc-700 transition-colors">
+          <div class="flex items-center justify-between text-xs font-mono text-zinc-500">
+            <span class="text-amber-400 font-medium">PHYSICAL FABRICATION &bull; CO2 LASER</span>
+            <span>Amman, Jordan</span>
+          </div>
+
+          <h3 class="text-xl font-bold text-white">
+            PuzzleMe JO: Wooden Laser Puzzles
+          </h3>
+
+          <p class="text-sm text-zinc-300 leading-relaxed font-light">
+            Bringing mathematical algorithms into tangible real life. My brother and I run a woodworking shop in Amman equipped with an industrial CO2 laser cutting machine. We turn complex fractal patterns and artistic illustrations into precision-cut wooden jigsaw puzzles, designed using Adobe Illustrator, 3ds Max, and LightBurn.
+          </p>
+
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-400">
+            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">CO2 Laser Cutting</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">LightBurn</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Illustrator</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Hardwood Finishing</span>
+          </div>
+
+          <div class="pt-2 flex items-center gap-5 text-sm font-medium">
+            <a href="https://puzzlemejo.github.io/" target="_blank" rel="noopener" class="text-white hover:underline flex items-center gap-1">
+              <span>Visit Online Store</span>
+              <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+            </a>
+            <a href="https://www.instagram.com/puzzleme.jo/" target="_blank" rel="noopener" class="text-zinc-400 hover:text-white flex items-center gap-1">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
               <span>@puzzleme.jo</span>
             </a>
           </div>
-        </div>
+        </article>
+
+        <!-- Project 3: Unity Assets & Experiments -->
+        <article class="p-6 rounded-xl bg-zinc-900/40 border border-zinc-800 space-y-4 hover:border-zinc-700 transition-colors">
+          <div class="flex items-center justify-between text-xs font-mono text-zinc-500">
+            <span class="text-blue-400 font-medium">TOOLS &amp; SIMULATIONS</span>
+            <span>Unity Asset Store</span>
+          </div>
+
+          <h3 class="text-xl font-bold text-white">
+            Commercial Unity Assets &amp; Math Simulations
+          </h3>
+
+          <p class="text-sm text-zinc-300 leading-relaxed font-light">
+            I build and sell modular game tools and developer assets for Unity. I also write simulations to test and visualize concepts in linear algebra, vector calculus, kinematics, and particle systems directly inside 3D environments.
+          </p>
+
+          <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-400">
+            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">C# Architecture</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Vector Math</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Physics Solvers</span>
+            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Editor Scripting</span>
+          </div>
+        </article>
 
       </div>
+    </section>
 
-    </div>
-  </section>
-
-  <!-- The Journey / Story Section -->
-  <section id="story" class="py-24 border-b border-white/10">
-    <div class="max-w-6xl mx-auto px-6">
-      
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div class="lg:col-span-4">
-          <div class="sticky top-24">
-            <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-2 block">02 // The Journey</span>
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
-              Forged Through Curiosity &amp; Resilience
-            </h2>
-            <p class="text-sm text-zinc-400 font-light leading-relaxed mb-6">
-              A timeline of self-taught engineering, academic mathematics, and creating against systemic barriers.
-            </p>
-            <div class="p-4 rounded-lg bg-zinc-900/60 border border-white/10 font-mono text-xs text-zinc-400 space-y-2">
-              <div class="text-white font-semibold flex items-center gap-1.5">
-                <i data-lucide="map-pin" class="w-3.5 h-3.5 text-zinc-400"></i>
-                Amman, Jordan
-              </div>
-              <p class="text-[11px] leading-normal font-sans">
-                As a Palestinian refugee living in Jordan, legal and employment rights are heavily restricted. Rather than seeing this as a dead end, it pushed me to become an uncompromising autodidact—building real commercial products, publishing games, and sharing mathematical knowledge freely.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Timeline Column -->
-        <div class="lg:col-span-8 space-y-12">
-          
-          <!-- 2010 -->
-          <div class="relative pl-8 border-l border-white/15">
-            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-black border-2 border-white"></div>
-            <span class="text-xs font-mono text-zinc-500 block mb-1">2010 &bull; AGE 12</span>
-            <h3 class="text-xl font-bold text-white mb-2">Learning 3ds Max from Physical Books</h3>
-            <p class="text-sm text-zinc-400 font-light leading-relaxed">
-              Without broadband internet or online courses, I taught myself 3ds Max and 3D computer graphics cover-to-cover from printed books. This early start forged a deep spatial intuition for geometry, topology, UV unwrapping, lighting, and coordinate spaces that underpins all my work today.
-            </p>
-          </div>
-
-          <!-- 2018 -->
-          <div class="relative pl-8 border-l border-white/15">
-            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-amber-400 border-2 border-black"></div>
-            <span class="text-xs font-mono text-amber-400 font-medium block mb-1">2018 &bull; BREAKTHROUGH</span>
-            <h3 class="text-xl font-bold text-white mb-2">3rd Place at The Very Big Indie Pitch (Pocket Gamer)</h3>
-            <p class="text-sm text-zinc-400 font-light leading-relaxed">
-              Entered professional game development and competed in my very first game dev contest at the Jordan Gaming Summit 2018. Competing against experienced regional studios, my prototype took <strong>3rd Place</strong> at Pocket Gamer's acclaimed Big Indie Pitch, marking the official beginning of my professional game development career.
-            </p>
-          </div>
-
-          <!-- 2022 -->
-          <div class="relative pl-8 border-l border-white/15">
-            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-black border-2 border-white"></div>
-            <span class="text-xs font-mono text-zinc-500 block mb-1">JANUARY 2022</span>
-            <h3 class="text-xl font-bold text-white mb-2">B.Sc. in Mathematics</h3>
-            <p class="text-sm text-zinc-400 font-light leading-relaxed">
-              Graduated with a Bachelor's Degree in Mathematics. While I teach math privately, I quickly discovered that mathematics achieves its greatest visual power inside game engines and code—transforming abstract linear algebra, differential calculus, and topology into responsive physical systems.
-            </p>
-          </div>
-
-          <!-- 2022 - Present -->
-          <div class="relative pl-8 border-l border-white/15">
-            <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-black border-2 border-emerald-400"></div>
-            <span class="text-xs font-mono text-emerald-400 font-medium block mb-1">2022 &ndash; PRESENT</span>
-            <h3 class="text-xl font-bold text-white mb-2">Math Educator @mathpisalah &amp; Commercial Unity Assets</h3>
-            <p class="text-sm text-zinc-400 font-light leading-relaxed">
-              Launched content channels under <strong class="text-zinc-200">@mathpisalah</strong> on YouTube and Instagram to make mathematical concepts visual and intuitive. Developed commercial Unity assets for developers on the Unity Asset Store, and brought mathematics into the physical world through industrial CO2 laser engineering.
-            </p>
-          </div>
-
-        </div>
+    <!-- About / Background Section -->
+    <section id="about" class="space-y-6">
+      <div>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-2">My Story &amp; Background</h2>
+        <p class="text-sm text-zinc-400">How an autodidact background shaped my work.</p>
       </div>
 
-    </div>
-  </section>
-
-  <!-- Interactive Math & Physics Lab -->
-  <section id="lab" class="py-24 border-b border-white/10 bg-[#070708]">
-    <div class="max-w-6xl mx-auto px-6">
-      
-      <div class="mb-12">
-        <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-2 block">03 // Interactive Math Lab</span>
-        <h2 class="text-3xl font-bold tracking-tight text-white mb-2">Deterministic Physics &amp; Kinematics Sandbox</h2>
-        <p class="text-sm text-zinc-400 font-light max-w-2xl">
-          Drag the pendulum bob, tweak damping and gravitational constants, and observe numerical integration and energy conservation in real time.
+      <div class="space-y-4 text-sm text-zinc-300 leading-relaxed font-light">
+        <p>
+          I started my journey with computer graphics back in <strong class="text-white font-medium">2010 at age 12</strong>. Without an internet connection or video tutorials, I learned <strong>3ds Max</strong> cover-to-cover from printed books. That experience gave me an early, hands-on spatial foundation in 3D geometry, polygon topology, and coordinate transformations.
+        </p>
+        <p>
+          In <strong class="text-white font-medium">2018</strong>, I began making games professionally. I entered my first game dev competition—The Very Big Indie Pitch (Pocket Gamer) at the Jordan Gaming Summit—and placed <strong>3rd</strong> with my first prototype. That confirmed to me that building interactive systems was my path.
+        </p>
+        <p>
+          In <strong class="text-white font-medium">January 2022</strong>, I graduated with a Bachelor's Degree in Mathematics. While I have taught math privately, I realized that math is most exciting when written into code—powering game mechanics, procedural algorithms, physics engines, and visual simulations.
+        </p>
+        <p>
+          I am a Palestinian refugee living in Amman, Jordan. Because of legal restrictions on work, healthcare, and formal employment, traditional career doors are often closed. Rather than letting that stop me, it pushed me to become an uncompromising self-learner—building commercial games, mastering industrial laser machines, and creating educational math content online.
         </p>
       </div>
 
-      <div class="border border-white/10 rounded-xl overflow-hidden bg-black grid grid-cols-1 lg:grid-cols-12">
-        
-        <!-- Canvas Viewport -->
-        <div class="lg:col-span-8 p-6 relative flex flex-col justify-between border-b lg:border-b-0 lg:border-r border-white/10 min-h-[420px]">
-          <div class="flex items-center justify-between text-xs font-mono text-zinc-400 mb-2">
-            <span class="flex items-center gap-2">
-              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-              Harmonic Oscillator // Semi-Implicit Solver
-            </span>
-            <span id="fpsCounter" class="text-zinc-500">60 FPS</span>
-          </div>
-
-          <div class="relative w-full flex-1 flex items-center justify-center">
-            <canvas id="pendulumCanvas" class="w-full h-80 block cursor-grab active:cursor-grabbing"></canvas>
-          </div>
-
-          <div class="pt-3 border-t border-white/10 flex flex-wrap items-center justify-between gap-4 text-[11px] font-mono text-zinc-500">
-            <span>&theta;&Prime; + &beta;&theta;&prime; + (g/L)sin(&theta;) = 0</span>
-            <div class="flex gap-2">
-              <button id="toggleTraceBtn" class="px-2.5 py-1 rounded border border-white/10 hover:border-white/30 text-zinc-300">Toggle Trail</button>
-              <button id="resetPendulumBtn" class="px-2.5 py-1 rounded border border-white/10 hover:border-white/30 text-zinc-300">Reset State</button>
-            </div>
-          </div>
+      <!-- Educational Channels Box -->
+      <div class="p-5 rounded-xl bg-zinc-900/40 border border-zinc-800 space-y-3">
+        <div class="text-white font-medium text-sm flex items-center gap-2">
+          <i data-lucide="video" class="w-4 h-4 text-red-400"></i>
+          <span>Educational Math Channels: @MathPiSalah</span>
         </div>
-
-        <!-- Control Panel -->
-        <div class="lg:col-span-4 p-6 bg-zinc-950/80 flex flex-col justify-between font-mono text-xs space-y-6">
-          <div>
-            <h4 class="text-white font-semibold mb-4 uppercase tracking-wider text-[11px] border-b border-white/10 pb-2">Physics Parameters</h4>
-            
-            <div class="space-y-4">
-              <div>
-                <div class="flex justify-between text-zinc-400 mb-1">
-                  <span>Gravity (g)</span>
-                  <span id="gravityVal" class="text-white">9.8 m/s&sup2;</span>
-                </div>
-                <input id="gravitySlider" type="range" min="0" max="25" step="0.5" value="9.8" class="w-full accent-white bg-zinc-800 h-1 rounded cursor-pointer">
-              </div>
-
-              <div>
-                <div class="flex justify-between text-zinc-400 mb-1">
-                  <span>Friction / Damping (&beta;)</span>
-                  <span id="dampingVal" class="text-white">0.02</span>
-                </div>
-                <input id="dampingSlider" type="range" min="0" max="0.1" step="0.005" value="0.02" class="w-full accent-white bg-zinc-800 h-1 rounded cursor-pointer">
-              </div>
-
-              <div>
-                <div class="flex justify-between text-zinc-400 mb-1">
-                  <span>String Length (L)</span>
-                  <span id="lengthVal" class="text-white">160 px</span>
-                </div>
-                <input id="lengthSlider" type="range" min="80" max="220" step="5" value="160" class="w-full accent-white bg-zinc-800 h-1 rounded cursor-pointer">
-              </div>
-            </div>
-
-            <!-- Metrics -->
-            <div class="mt-8 border-t border-white/10 pt-4 space-y-2 text-[11px]">
-              <div class="flex justify-between">
-                <span class="text-zinc-500">Angle (&theta;):</span>
-                <span id="angleMetric" class="text-zinc-300 font-mono">0.00 rad</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-zinc-500">Angular Velocity (&omega;):</span>
-                <span id="velMetric" class="text-zinc-300 font-mono">0.00 rad/s</span>
-              </div>
-              <div class="flex justify-between">
-                <span class="text-zinc-500">Total Mechanical Energy (E):</span>
-                <span id="energyMetric" class="text-zinc-300 font-mono">100.0%</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="p-3 border border-white/10 rounded bg-black/40 text-[11px] text-zinc-400 leading-normal font-sans">
-            <span class="font-mono text-white text-[10px] block mb-1 uppercase tracking-wide">&bull; Educator Note (@mathpisalah)</span>
-            Simulating this differential equation cleanly illustrates why Euler integration diverges without symplectic damping—the exact foundation needed for robust game physics engines.
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Four Pillars of Craft -->
-  <section id="craft" class="py-24 border-b border-white/10">
-    <div class="max-w-6xl mx-auto px-6">
-      
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-white/10">
-        <div>
-          <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-2 block">04 // Core Capabilities</span>
-          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-white">Four Pillars of Craft</h2>
-        </div>
-        <p class="text-xs font-mono text-zinc-400 mt-4 md:mt-0 max-w-xs">
-          A rare cross-disciplinary stack connecting pure theory to software engines and physical machinery.
+        <p class="text-xs text-zinc-400 leading-relaxed font-light">
+          I share visual explanations of mathematical concepts, calculus, and game physics on YouTube and Instagram to help learners see the beauty of applied math.
         </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        
-        <!-- Pillar 1 -->
-        <div class="p-6 border border-white/10 rounded-xl bg-zinc-950/60 hover:border-white/20 transition-all">
-          <div class="flex items-center gap-2 mb-4">
-            <div class="p-2 rounded bg-white/5 border border-white/10 text-white">
-              <i data-lucide="gamepad-2" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <h3 class="text-base font-bold text-white">1. Game Engineering &amp; Unity</h3>
-              <span class="text-xs font-mono text-zinc-500">8+ Years Professional Experience</span>
-            </div>
-          </div>
-          <p class="text-sm text-zinc-400 font-light leading-relaxed mb-4">
-            Architecture of deterministic gameplay mechanics, state pattern machines, spatial partitioning, procedural level generation, and mobile optimization on Android/iOS.
-          </p>
-          <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-400">
-            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Unity C#</span>
-            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Commercial Assets</span>
-            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">URP Shaders</span>
-            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">State Machines</span>
-          </div>
-        </div>
-
-        <!-- Pillar 2 -->
-        <div class="p-6 border border-white/10 rounded-xl bg-zinc-950/60 hover:border-white/20 transition-all">
-          <div class="flex items-center gap-2 mb-4">
-            <div class="p-2 rounded bg-white/5 border border-white/10 text-white">
-              <i data-lucide="sigma" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <h3 class="text-base font-bold text-white">2. Pure &amp; Applied Mathematics</h3>
-              <span class="text-xs font-mono text-zinc-500">B.Sc. in Mathematics (2022)</span>
-            </div>
-          </div>
-          <p class="text-sm text-zinc-400 font-light leading-relaxed mb-4">
-            Specializing in linear algebra (matrices, quaternions, transformations), differential kinematics, fractal geometry, graph algorithms, and visual math education.
-          </p>
-          <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-400">
-            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Linear Algebra</span>
-            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Fractal Geometry</span>
-            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Kinematics</span>
-            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">@mathpisalah</span>
-          </div>
-        </div>
-
-        <!-- Pillar 3 -->
-        <div class="p-6 border border-white/10 rounded-xl bg-zinc-950/60 hover:border-white/20 transition-all">
-          <div class="flex items-center gap-2 mb-4">
-            <div class="p-2 rounded bg-white/5 border border-white/10 text-white">
-              <i data-lucide="box" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <h3 class="text-base font-bold text-white">3. 3D Spatial Design &amp; 3ds Max</h3>
-              <span class="text-xs font-mono text-zinc-500">14+ Years Since 2010 (Self-Taught)</span>
-            </div>
-          </div>
-          <p class="text-sm text-zinc-400 font-light leading-relaxed mb-4">
-            Deep spatial intuition forged over more than a decade of polygon modeling, complex geometry manipulation, rendering pipelines, lighting, and UV unwrapping.
-          </p>
-          <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-400">
-            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">3ds Max</span>
-            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Polygon Modeling</span>
-            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">UV Mapping</span>
-            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Spatial Geometry</span>
-          </div>
-        </div>
-
-        <!-- Pillar 4 -->
-        <div class="p-6 border border-white/10 rounded-xl bg-zinc-950/60 hover:border-white/20 transition-all">
-          <div class="flex items-center gap-2 mb-4">
-            <div class="p-2 rounded bg-white/5 border border-white/10 text-white">
-              <i data-lucide="flame" class="w-5 h-5"></i>
-            </div>
-            <div>
-              <h3 class="text-base font-bold text-white">4. CO2 Laser &amp; Digital Fabrication</h3>
-              <span class="text-xs font-mono text-zinc-500">Workshop Co-Owner &amp; Operator</span>
-            </div>
-          </div>
-          <p class="text-sm text-zinc-400 font-light leading-relaxed mb-4">
-            Operating industrial laser cutters, precise vector kerf alignment in LightBurn and Adobe Illustrator, and crafting physical wooden and acrylic mechanical puzzles.
-          </p>
-          <div class="flex flex-wrap gap-1.5 font-mono text-[11px] text-zinc-400">
-            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">CO2 Lasers</span>
-            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">LightBurn</span>
-            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Adobe Illustrator</span>
-            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Woodworking</span>
-          </div>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Channels & Content Strip -->
-  <section class="py-16 border-b border-white/10 bg-zinc-950">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-        <div>
-          <span class="text-xs font-mono text-zinc-500 uppercase tracking-widest block mb-1">Educational Channels</span>
-          <h3 class="text-xl font-bold text-white">Follow my math &amp; simulation explorations</h3>
-          <p class="text-xs text-zinc-400 font-light mt-1">Sharing visual explanations of calculus, linear algebra, and game physics.</p>
-        </div>
-
-        <div class="flex flex-wrap items-center gap-3 font-mono text-xs">
-          <a href="https://www.youtube.com/@MathPiSalah" target="_blank" rel="noopener" class="px-4 py-2.5 rounded border border-white/10 hover:border-white/30 text-white flex items-center gap-2 transition-all">
-            <i data-lucide="youtube" class="w-4 h-4 text-red-400"></i>
+        <div class="flex flex-wrap items-center gap-3 pt-1 text-xs font-mono">
+          <a href="https://www.youtube.com/@MathPiSalah" target="_blank" rel="noopener" class="text-red-400 hover:text-red-300 flex items-center gap-1 font-medium">
+            <i data-lucide="youtube" class="w-3.5 h-3.5"></i>
             <span>YouTube: @MathPiSalah</span>
           </a>
-          <a href="https://www.instagram.com/mathpisalah/" target="_blank" rel="noopener" class="px-4 py-2.5 rounded border border-white/10 hover:border-white/30 text-white flex items-center gap-2 transition-all">
-            <i data-lucide="instagram" class="w-4 h-4 text-pink-400"></i>
+          <span class="text-zinc-600">&bull;</span>
+          <a href="https://www.instagram.com/mathpisalah/" target="_blank" rel="noopener" class="text-pink-400 hover:text-pink-300 flex items-center gap-1 font-medium">
+            <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
             <span>Instagram: @mathpisalah</span>
           </a>
-          <a href="https://www.facebook.com/SalahAlDin.AbuAli" target="_blank" rel="noopener" class="px-4 py-2.5 rounded border border-white/10 hover:border-white/30 text-white flex items-center gap-2 transition-all">
-            <i data-lucide="facebook" class="w-4 h-4 text-blue-400"></i>
-            <span>Facebook: SalahAlDin.AbuAli</span>
-          </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact & Get In Touch -->
-  <section id="contact" class="py-24 border-b border-white/10">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="max-w-3xl">
-        <span class="text-xs font-mono uppercase tracking-widest text-zinc-500 mb-2 block">05 // Connect &amp; Inquiries</span>
-        <h2 class="text-4xl sm:text-5xl font-bold tracking-tight text-white mb-6">
-          Let's build something extraordinary together.
-        </h2>
-        <p class="text-zinc-300 text-base font-light mb-8 leading-relaxed">
-          I am actively open to <strong class="text-white font-medium">remote game engineering contracts</strong>, <strong class="text-white font-medium">Unity C# development</strong>, <strong class="text-white font-medium">physics &amp; simulation design</strong>, and collaborative indie game projects worldwide.
+    <!-- Skills Matrix -->
+    <section class="space-y-6">
+      <div>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-2">Technical Toolkit</h2>
+        <p class="text-sm text-zinc-400">The software, languages, and tools I use daily.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
+        <div class="p-4 rounded-lg bg-zinc-900/30 border border-zinc-800 space-y-2">
+          <div class="text-white font-semibold flex items-center gap-2">
+            <i data-lucide="code" class="w-4 h-4 text-zinc-400"></i>
+            <span>Game Engineering</span>
+          </div>
+          <p class="text-zinc-400 font-sans text-xs">Unity, C#, Gameplay Architecture, Mobile Optimization (Android), Shaders, Physics.</p>
+        </div>
+
+        <div class="p-4 rounded-lg bg-zinc-900/30 border border-zinc-800 space-y-2">
+          <div class="text-white font-semibold flex items-center gap-2">
+            <i data-lucide="sigma" class="w-4 h-4 text-zinc-400"></i>
+            <span>Applied Mathematics</span>
+          </div>
+          <p class="text-zinc-400 font-sans text-xs">Linear Algebra (Vectors, Matrices, Quaternions), Fractal Geometry, Kinematics, Discrete Math.</p>
+        </div>
+
+        <div class="p-4 rounded-lg bg-zinc-900/30 border border-zinc-800 space-y-2">
+          <div class="text-white font-semibold flex items-center gap-2">
+            <i data-lucide="box" class="w-4 h-4 text-zinc-400"></i>
+            <span>3D &amp; Visual Design</span>
+          </div>
+          <p class="text-zinc-400 font-sans text-xs">3ds Max (since 2010), Polygon Modeling, UV Mapping, Topology, Rendering, Blender.</p>
+        </div>
+
+        <div class="p-4 rounded-lg bg-zinc-900/30 border border-zinc-800 space-y-2">
+          <div class="text-white font-semibold flex items-center gap-2">
+            <i data-lucide="scissors" class="w-4 h-4 text-zinc-400"></i>
+            <span>Laser &amp; Fabrication</span>
+          </div>
+          <p class="text-zinc-400 font-sans text-xs">Industrial CO2 Laser Cutting, LightBurn, Adobe Illustrator, Woodworking &amp; Materials.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="space-y-6 pt-6 border-t border-zinc-800">
+      <div>
+        <h2 class="text-2xl font-bold text-white tracking-tight mb-2">Get In Touch</h2>
+        <p class="text-sm text-zinc-400 leading-relaxed max-w-xl">
+          I am actively available for <strong class="text-zinc-200">remote game development contracts</strong>, <strong class="text-zinc-200">Unity/C# development</strong>, <strong class="text-zinc-200">math/physics simulations</strong>, or freelance collaboration.
         </p>
-
-        <!-- Direct Contact Cards -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8 font-mono text-xs">
-          <!-- WhatsApp Card -->
-          <a href="https://wa.me/962789423717?text=Hello%20Salah,%20I%20saw%20your%20portfolio" target="_blank" rel="noopener" class="p-4 rounded-xl border border-emerald-500/30 bg-emerald-950/20 hover:bg-emerald-950/40 hover:border-emerald-500/60 transition-all flex items-center justify-between group">
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center">
-                <i data-lucide="message-circle" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <span class="text-zinc-400 text-[10px] block uppercase tracking-wider">Direct WhatsApp</span>
-                <span class="text-white font-semibold text-sm">+962 7 8942 3717</span>
-              </div>
-            </div>
-            <i data-lucide="arrow-up-right" class="w-4 h-4 text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-          </a>
-
-          <!-- Email Card -->
-          <a href="mailto:salahaldin.abuali@gmail.com" class="p-4 rounded-xl border border-white/10 bg-zinc-950/60 hover:bg-zinc-900/60 hover:border-white/30 transition-all flex items-center justify-between group">
-            <div class="flex items-center gap-3">
-              <div class="w-9 h-9 rounded-full bg-white/10 text-white flex items-center justify-center">
-                <i data-lucide="mail" class="w-5 h-5"></i>
-              </div>
-              <div>
-                <span class="text-zinc-400 text-[10px] block uppercase tracking-wider">Direct Email</span>
-                <span class="text-white font-semibold text-sm">salahaldin.abuali@gmail.com</span>
-              </div>
-            </div>
-            <i data-lucide="arrow-up-right" class="w-4 h-4 text-zinc-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-          </a>
-        </div>
-
-        <!-- Action Buttons -->
-        <div class="flex flex-wrap items-center gap-3 font-mono text-xs mb-6">
-          <button id="copyEmailBtn" class="px-5 py-3 rounded bg-white text-black font-semibold hover:bg-zinc-200 transition-all flex items-center justify-center gap-2 shadow-sm">
-            <i data-lucide="copy" class="w-4 h-4"></i>
-            <span id="copyBtnText">Copy Email Address</span>
-          </button>
-
-          <a href="tel:+962789423717" class="px-5 py-3 rounded border border-white/20 hover:border-white/50 text-white transition-colors flex items-center justify-center gap-2">
-            <i data-lucide="phone" class="w-4 h-4"></i>
-            <span>Call +962 7 8942 3717</span>
-          </a>
-
-          <a href="https://www.facebook.com/SalahAlDin.AbuAli" target="_blank" rel="noopener" class="px-4 py-3 rounded border border-white/10 hover:border-white/30 text-zinc-300 hover:text-white transition-colors flex items-center justify-center gap-2">
-            <i data-lucide="facebook" class="w-4 h-4 text-blue-400"></i>
-            <span>Facebook Profile</span>
-          </a>
-        </div>
-
-        <div id="copyToast" class="hidden text-xs font-mono bg-zinc-900 border border-white/20 text-white px-4 py-2 rounded mb-6 inline-flex items-center gap-2">
-          <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
-          <span>Email copied to clipboard! (salahaldin.abuali@gmail.com)</span>
-        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="py-12 bg-black text-xs font-mono text-zinc-500">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-      <div class="flex items-center gap-3">
-        <span class="text-white font-semibold">SALAH ABU ALI</span>
-        <span>&bull;</span>
-        <span>Game Developer &bull; Mathematician &bull; Maker</span>
+      <!-- Contact options -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/962789423717?text=Hello%20Salah,%20I%20saw%20your%20portfolio" target="_blank" rel="noopener" class="p-4 rounded-xl border border-emerald-500/30 bg-emerald-950/20 hover:bg-emerald-950/30 transition-colors flex items-center justify-between group">
+          <div class="flex items-center gap-3">
+            <i data-lucide="message-circle" class="w-5 h-5 text-emerald-400"></i>
+            <div>
+              <span class="text-xs text-zinc-400 block font-mono">WhatsApp</span>
+              <span class="text-white font-medium">+962 7 8942 3717</span>
+            </div>
+          </div>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:salahaldin.abuali@gmail.com" class="p-4 rounded-xl border border-zinc-800 bg-zinc-900/40 hover:bg-zinc-900/70 transition-colors flex items-center justify-between group">
+          <div class="flex items-center gap-3">
+            <i data-lucide="mail" class="w-5 h-5 text-zinc-300"></i>
+            <div>
+              <span class="text-xs text-zinc-400 block font-mono">Email</span>
+              <span class="text-white font-medium truncate max-w-[190px]">salahaldin.abuali@gmail.com</span>
+            </div>
+          </div>
+          <i data-lucide="arrow-up-right" class="w-4 h-4 text-zinc-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+        </a>
       </div>
-      
-      <div class="flex flex-wrap items-center gap-6">
+
+      <!-- Action buttons & social links -->
+      <div class="flex flex-wrap items-center gap-3 text-xs font-mono pt-2">
+        <button id="copyEmailBtn" class="px-4 py-2.5 rounded bg-zinc-800 hover:bg-zinc-700 text-white font-medium transition-colors flex items-center gap-2">
+          <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+          <span id="copyBtnText">Copy Email</span>
+        </button>
+
+        <a href="tel:+962789423717" class="px-4 py-2.5 rounded bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 hover:text-white transition-colors flex items-center gap-1.5">
+          <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+          <span>Call: +962 7 8942 3717</span>
+        </a>
+
+        <a href="https://www.facebook.com/SalahAlDin.AbuAli" target="_blank" rel="noopener" class="px-4 py-2.5 rounded bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 hover:text-white transition-colors flex items-center gap-1.5">
+          <i data-lucide="facebook" class="w-3.5 h-3.5 text-blue-400"></i>
+          <span>Facebook</span>
+        </a>
+
+        <a href="https://github.com/Salah-Abu-Ali" target="_blank" rel="noopener" class="px-4 py-2.5 rounded bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 hover:text-white transition-colors flex items-center gap-1.5">
+          <i data-lucide="github" class="w-3.5 h-3.5"></i>
+          <span>GitHub</span>
+        </a>
+      </div>
+
+      <div id="copyToast" class="hidden text-xs font-mono bg-zinc-800 border border-zinc-700 text-white px-3 py-1.5 rounded inline-flex items-center gap-2">
+        <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
+        <span>Copied salahaldin.abuali@gmail.com to clipboard!</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Clean Footer -->
+  <footer class="border-t border-zinc-800/80 mt-20 py-10 text-xs font-mono text-zinc-500">
+    <div class="max-w-3xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        <span>&copy; 2026 Salah Abu Ali &bull; Amman, Jordan</span>
+      </div>
+      <div class="flex items-center gap-5">
         <a href="https://wa.me/962789423717" target="_blank" rel="noopener" class="hover:text-emerald-400 transition-colors">WhatsApp</a>
-        <a href="https://www.facebook.com/SalahAlDin.AbuAli" target="_blank" rel="noopener" class="hover:text-blue-400 transition-colors">Facebook</a>
         <a href="https://www.youtube.com/@MathPiSalah" target="_blank" rel="noopener" class="hover:text-red-400 transition-colors">YouTube</a>
-        <a href="https://play.google.com/store/apps/details?id=com.ZaytuneGames.Puzzleme&hl=en" target="_blank" rel="noopener" class="hover:text-white transition-colors">PuzzleMe</a>
-        <a href="https://puzzlemejo.github.io/" target="_blank" rel="noopener" class="hover:text-white transition-colors">Workshop Store</a>
+        <a href="https://www.instagram.com/mathpisalah/" target="_blank" rel="noopener" class="hover:text-pink-400 transition-colors">Instagram</a>
         <a href="https://github.com/Salah-Abu-Ali" target="_blank" rel="noopener" class="hover:text-white transition-colors">GitHub</a>
-        <a href="#heroCanvas" class="hover:text-white transition-colors">Top &uarr;</a>
+        <a href="#" class="hover:text-white transition-colors">Top &uarr;</a>
       </div>
     </div>
   </footer>
@@ -721,298 +383,6 @@
   <script>
     lucide.createIcons();
 
-    // ------------------------------------------------------------------
-    // 1. Hero Canvas: Harmonic Vector / Kinematic Wave Field
-    // ------------------------------------------------------------------
-    const heroCanvas = document.getElementById('heroCanvas');
-    const heroCtx = heroCanvas.getContext('2d');
-    let heroMouse = { x: -1000, y: -1000 };
-    let heroTime = 0;
-
-    function resizeHeroCanvas() {
-      const rect = heroCanvas.parentElement.getBoundingClientRect();
-      heroCanvas.width = rect.width * window.devicePixelRatio;
-      heroCanvas.height = rect.height * window.devicePixelRatio;
-      heroCtx.scale(window.devicePixelRatio, window.devicePixelRatio);
-    }
-    window.addEventListener('resize', resizeHeroCanvas);
-    resizeHeroCanvas();
-
-    heroCanvas.addEventListener('mousemove', (e) => {
-      const rect = heroCanvas.getBoundingClientRect();
-      heroMouse.x = e.clientX - rect.left;
-      heroMouse.y = e.clientY - rect.top;
-    });
-
-    heroCanvas.addEventListener('mouseleave', () => {
-      heroMouse.x = -1000;
-      heroMouse.y = -1000;
-    });
-
-    document.getElementById('resetFieldBtn').addEventListener('click', () => {
-      heroTime = 0;
-    });
-
-    function drawHeroField() {
-      const width = heroCanvas.parentElement.clientWidth;
-      const height = heroCanvas.parentElement.clientHeight;
-      heroCtx.clearRect(0, 0, width, height);
-
-      const spacing = 18;
-      const cols = Math.floor(width / spacing);
-      const rows = Math.floor(height / spacing);
-
-      heroTime += 0.02;
-
-      for (let i = 0; i < cols; i++) {
-        for (let j = 0; j < rows; j++) {
-          const x = (i + 0.5) * spacing;
-          const y = (j + 0.5) * spacing;
-
-          const dx = x - (heroMouse.x > 0 ? heroMouse.x : width / 2);
-          const dy = y - (heroMouse.y > 0 ? heroMouse.y : height / 2);
-          const dist = Math.sqrt(dx * dx + dy * dy);
-
-          const wave = Math.sin(dist * 0.05 - heroTime);
-          const angle = Math.atan2(dy, dx) + wave * 0.8;
-          const len = 6 + wave * 3;
-
-          heroCtx.save();
-          heroCtx.translate(x, y);
-          heroCtx.rotate(angle);
-
-          const alpha = Math.max(0.12, Math.min(0.85, 0.2 + (1 - Math.min(dist, 250) / 250) * 0.6 + wave * 0.15));
-          heroCtx.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
-          heroCtx.lineWidth = 1;
-
-          heroCtx.beginPath();
-          heroCtx.moveTo(-len / 2, 0);
-          heroCtx.lineTo(len / 2, 0);
-          heroCtx.stroke();
-
-          heroCtx.fillStyle = `rgba(255, 255, 255, ${alpha * 0.9})`;
-          heroCtx.beginPath();
-          heroCtx.arc(len / 2, 0, 1, 0, Math.PI * 2);
-          heroCtx.fill();
-
-          heroCtx.restore();
-        }
-      }
-
-      requestAnimationFrame(drawHeroField);
-    }
-    requestAnimationFrame(drawHeroField);
-
-    // ------------------------------------------------------------------
-    // 2. Interactive Math Lab: Physical Pendulum Simulation
-    // ------------------------------------------------------------------
-    const pendCanvas = document.getElementById('pendulumCanvas');
-    const pendCtx = pendCanvas.getContext('2d');
-
-    function resizePendCanvas() {
-      const rect = pendCanvas.parentElement.getBoundingClientRect();
-      pendCanvas.width = rect.width * window.devicePixelRatio;
-      pendCanvas.height = 320 * window.devicePixelRatio;
-      pendCtx.scale(window.devicePixelRatio, window.devicePixelRatio);
-    }
-    window.addEventListener('resize', resizePendCanvas);
-    resizePendCanvas();
-
-    let theta = Math.PI / 3;
-    let omega = 0.0;
-    let alpha = 0.0;
-    let length = 160;
-    let gravity = 9.8 * 6;
-    let damping = 0.02;
-
-    let isDragging = false;
-    let showTrail = true;
-    let trail = [];
-
-    const gravitySlider = document.getElementById('gravitySlider');
-    const gravityVal = document.getElementById('gravityVal');
-    const dampingSlider = document.getElementById('dampingSlider');
-    const dampingVal = document.getElementById('dampingVal');
-    const lengthSlider = document.getElementById('lengthSlider');
-    const lengthVal = document.getElementById('lengthVal');
-
-    const angleMetric = document.getElementById('angleMetric');
-    const velMetric = document.getElementById('velMetric');
-    const energyMetric = document.getElementById('energyMetric');
-
-    gravitySlider.addEventListener('input', (e) => {
-      const g = parseFloat(e.target.value);
-      gravity = g * 6;
-      gravityVal.textContent = g.toFixed(1) + ' m/s²';
-    });
-
-    dampingSlider.addEventListener('input', (e) => {
-      damping = parseFloat(e.target.value);
-      dampingVal.textContent = damping.toFixed(3);
-    });
-
-    lengthSlider.addEventListener('input', (e) => {
-      length = parseFloat(e.target.value);
-      lengthVal.textContent = length.toFixed(0) + ' px';
-    });
-
-    document.getElementById('toggleTraceBtn')?.addEventListener('click', () => {
-      showTrail = !showTrail;
-      if (!showTrail) trail = [];
-    });
-
-    document.getElementById('resetPendulumBtn').addEventListener('click', () => {
-      theta = Math.PI / 3;
-      omega = 0.0;
-      alpha = 0.0;
-      trail = [];
-    });
-
-    function getOrigin() {
-      const w = pendCanvas.parentElement.clientWidth;
-      return { x: w / 2, y: 40 };
-    }
-
-    pendCanvas.addEventListener('mousedown', (e) => {
-      const rect = pendCanvas.getBoundingClientRect();
-      const mx = e.clientX - rect.left;
-      const my = e.clientY - rect.top;
-      const origin = getOrigin();
-      const bobX = origin.x + length * Math.sin(theta);
-      const bobY = origin.y + length * Math.cos(theta);
-
-      const d = Math.hypot(mx - bobX, my - bobY);
-      if (d < 35) {
-        isDragging = true;
-        omega = 0;
-      }
-    });
-
-    window.addEventListener('mousemove', (e) => {
-      if (!isDragging) return;
-      const rect = pendCanvas.getBoundingClientRect();
-      const mx = e.clientX - rect.left;
-      const my = e.clientY - rect.top;
-      const origin = getOrigin();
-      
-      theta = Math.atan2(mx - origin.x, my - origin.y);
-      omega = 0;
-    });
-
-    window.addEventListener('mouseup', () => {
-      if (isDragging) isDragging = false;
-    });
-
-    let lastTime = performance.now();
-    let frameCount = 0;
-    let lastFpsUpdate = performance.now();
-    const fpsCounter = document.getElementById('fpsCounter');
-
-    function updatePendulum(now) {
-      const dt = Math.min((now - lastTime) / 1000, 0.05);
-      lastTime = now;
-
-      frameCount++;
-      if (now - lastFpsUpdate > 500) {
-        const fps = Math.round((frameCount * 1000) / (now - lastFpsUpdate));
-        fpsCounter.textContent = fps + ' FPS';
-        frameCount = 0;
-        lastFpsUpdate = now;
-      }
-
-      if (!isDragging) {
-        alpha = -(gravity / length) * Math.sin(theta) - damping * omega;
-        omega += alpha * dt * 25;
-        theta += omega * dt * 25;
-      }
-
-      const w = pendCanvas.parentElement.clientWidth;
-      const h = 320;
-      pendCtx.clearRect(0, 0, w, h);
-
-      const origin = getOrigin();
-      const bobX = origin.x + length * Math.sin(theta);
-      const bobY = origin.y + length * Math.cos(theta);
-
-      if (showTrail) {
-        trail.push({ x: bobX, y: bobY });
-        if (trail.length > 90) trail.shift();
-
-        if (trail.length > 2) {
-          pendCtx.beginPath();
-          pendCtx.moveTo(trail[0].x, trail[0].y);
-          for (let i = 1; i < trail.length; i++) {
-            pendCtx.lineTo(trail[i].x, trail[i].y);
-          }
-          pendCtx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
-          pendCtx.lineWidth = 1.5;
-          pendCtx.stroke();
-        }
-      }
-
-      // Draw Pivot Mount
-      pendCtx.fillStyle = '#ffffff';
-      pendCtx.beginPath();
-      pendCtx.arc(origin.x, origin.y, 4, 0, Math.PI * 2);
-      pendCtx.fill();
-
-      // Draw reference axis (dotted)
-      pendCtx.setLineDash([3, 4]);
-      pendCtx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
-      pendCtx.beginPath();
-      pendCtx.moveTo(origin.x, origin.y);
-      pendCtx.lineTo(origin.x, origin.y + length + 20);
-      pendCtx.stroke();
-      pendCtx.setLineDash([]);
-
-      // Draw String
-      pendCtx.strokeStyle = '#ffffff';
-      pendCtx.lineWidth = 1.5;
-      pendCtx.beginPath();
-      pendCtx.moveTo(origin.x, origin.y);
-      pendCtx.lineTo(bobX, bobY);
-      pendCtx.stroke();
-
-      // Draw Angle Arc
-      if (Math.abs(theta) > 0.05) {
-        pendCtx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
-        pendCtx.lineWidth = 1;
-        pendCtx.beginPath();
-        const start = Math.PI / 2;
-        const end = Math.PI / 2 - theta;
-        pendCtx.arc(origin.x, origin.y, 35, Math.min(start, end), Math.max(start, end));
-        pendCtx.stroke();
-      }
-
-      // Draw Bob
-      pendCtx.fillStyle = '#ffffff';
-      pendCtx.beginPath();
-      pendCtx.arc(bobX, bobY, 12, 0, Math.PI * 2);
-      pendCtx.fill();
-
-      // Outer glow ring
-      pendCtx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
-      pendCtx.lineWidth = 2;
-      pendCtx.beginPath();
-      pendCtx.arc(bobX, bobY, 18, 0, Math.PI * 2);
-      pendCtx.stroke();
-
-      // Metrics
-      angleMetric.textContent = (theta % (Math.PI * 2)).toFixed(2) + ' rad';
-      velMetric.textContent = omega.toFixed(2) + ' rad/s';
-      
-      const kinetic = 0.5 * Math.pow(length * omega * 0.05, 2);
-      const potential = (gravity * 0.1) * length * 0.1 * (1 - Math.cos(theta));
-      const totalEnergy = Math.max(0, Math.min(100, (kinetic + potential) * 5));
-      energyMetric.textContent = totalEnergy.toFixed(1) + '%';
-
-      requestAnimationFrame(updatePendulum);
-    }
-    requestAnimationFrame(updatePendulum);
-
-    // ------------------------------------------------------------------
-    // 3. Email Copy Action
-    // ------------------------------------------------------------------
     const copyEmailBtn = document.getElementById('copyEmailBtn');
     const copyToast = document.getElementById('copyToast');
     const copyBtnText = document.getElementById('copyBtnText');
@@ -1020,24 +390,14 @@
     copyEmailBtn.addEventListener('click', () => {
       const email = 'salahaldin.abuali@gmail.com';
       navigator.clipboard.writeText(email).then(() => {
-        copyBtnText.textContent = 'Copied to Clipboard!';
+        copyBtnText.textContent = 'Copied!';
         copyToast.classList.remove('hidden');
         setTimeout(() => {
-          copyBtnText.textContent = 'Copy Email Address';
+          copyBtnText.textContent = 'Copy Email';
           copyToast.classList.add('hidden');
-        }, 4000);
+        }, 3500);
       });
     });
   </script>
-
-  <!-- Floating WhatsApp Quick Button -->
-  <a href="https://wa.me/962789423717?text=Hello%20Salah,%20I%20saw%20your%20portfolio" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-40 bg-emerald-600 hover:bg-emerald-500 text-white p-3.5 rounded-full shadow-2xl flex items-center gap-2 group transition-all duration-300 hover:scale-105 border border-emerald-400/30" title="Chat on WhatsApp (+962 7 8942 3717)">
-    <div class="relative">
-      <i data-lucide="message-circle" class="w-6 h-6"></i>
-      <span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-white animate-ping"></span>
-      <span class="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-white"></span>
-    </div>
-    <span class="hidden group-hover:inline-block font-mono text-xs pr-1 font-semibold transition-all">Chat on WhatsApp</span>
-  </a>
 </body>
 </html>
