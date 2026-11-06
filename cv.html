@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Salah Al Deen Abu Ali — Resume / CV</title>
+  <meta name="description" content="Official Resume / CV of Salah Al Deen Abu Ali. Math Teacher, Game Developer, and Maker based in Amman, Jordan.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    .font-arabic {
+      font-family: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    /* Print styles for pixel-perfect 1-page PDF export */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .cv-paper {
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+      }
+      @page {
+        size: A4;
+        margin: 12mm 15mm;
+      }
+    }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-900 min-h-screen py-6 sm:py-10 px-4 antialiased selection:bg-zinc-200 selection:text-black">
+
+  <!-- Top Action Controls (Hidden when printing) -->
+  <header class="no-print max-w-4xl mx-auto mb-6 flex flex-wrap items-center justify-between gap-3 text-sm">
+    <a href="index.html" class="inline-flex items-center gap-1.5 text-zinc-400 hover:text-white transition-colors">
+      <i data-lucide="arrow-left" class="w-4 h-4"></i>
+      <span>Back to Portfolio</span>
+    </a>
+
+    <div class="flex items-center gap-2.5">
+      <!-- Language Switcher Pill -->
+      <div class="inline-flex rounded-lg bg-zinc-900 p-1 border border-zinc-800 text-xs font-medium">
+        <button id="btnEn" onclick="switchLang('en')" class="px-3 py-1.5 rounded-md transition-all bg-white text-zinc-900 font-semibold shadow-sm">
+          English
+        </button>
+        <button id="btnAr" onclick="switchLang('ar')" class="px-3 py-1.5 rounded-md transition-all text-zinc-400 hover:text-white font-arabic">
+          العربية
+        </button>
+      </div>
+
+      <!-- Print / Save as PDF Button -->
+      <button onclick="window.print()" class="px-3.5 py-1.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-white font-medium text-xs flex items-center gap-1.5 border border-zinc-700 transition-colors" title="Print or save as 1-page PDF">
+        <i data-lucide="printer" class="w-3.5 h-3.5"></i>
+        <span class="hidden sm:inline">Print / Save PDF</span>
+      </button>
+
+      <!-- Direct PDF Download Link -->
+      <a href="Docs/Resume - Salah Abu Ali.pdf" download class="px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-xs flex items-center gap-1.5 transition-colors shadow-sm" title="Download original PDF file">
+        <i data-lucide="download" class="w-3.5 h-3.5"></i>
+        <span>Download PDF</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- ENGLISH VERSION -->
+  <!-- ========================================================================= -->
+  <main id="cvEn" class="cv-paper max-w-4xl mx-auto bg-white rounded-2xl p-8 sm:p-12 shadow-2xl border border-zinc-200/80 space-y-6">
+    
+    <!-- Header -->
+    <header class="flex flex-col sm:flex-row justify-between items-start gap-4 pb-6 border-b border-zinc-200">
+      <div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-950 mb-1">
+          Salah Al Deen Abu Ali
+        </h1>
+        <p class="text-sm font-semibold text-zinc-800 mb-1">
+          Math Teacher &bull; Game Developer &bull; Maker
+        </p>
+        <p class="text-xs text-zinc-700">
+          Amman, Jordan &bull; Nationality: Palestinian
+        </p>
+      </div>
+
+      <div class="text-left sm:text-right text-xs space-y-1 font-medium text-zinc-800">
+        <div>
+          <a href="tel:+962789423717" class="hover:text-black hover:underline font-semibold">+962 7 8942 3717</a>
+        </div>
+        <div>
+          <a href="mailto:SalahAlDin.AbuAli@gmail.com" class="hover:text-black hover:underline text-blue-600">SalahAlDin.AbuAli@gmail.com</a>
+        </div>
+        <div>
+          <a href="https://salah-abu-ali.github.io/" class="hover:text-black hover:underline text-blue-600 font-semibold">Portfolio (salah-abu-ali.github.io)</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Education -->
+    <section class="space-y-2">
+      <h2 class="text-base font-bold uppercase tracking-wider text-zinc-950 flex items-center gap-2">
+        <span>Education</span>
+      </h2>
+      <ul class="list-disc list-inside text-xs text-zinc-800 leading-relaxed pl-1">
+        <li>
+          <strong class="font-semibold text-zinc-950">Bachelor’s Degree in Mathematics</strong> &mdash; The Hashemite University (2022)  
+          <span class="text-zinc-600 block pl-5 mt-0.5 font-medium">Rating: Very Good (جيد جداً)</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Languages -->
+    <section class="space-y-2">
+      <h2 class="text-base font-bold uppercase tracking-wider text-zinc-950">
+        Languages
+      </h2>
+      <ul class="list-disc list-inside text-xs text-zinc-800 leading-relaxed pl-1 space-y-0.5">
+        <li><strong class="font-semibold text-zinc-950">Arabic:</strong> Native</li>
+        <li><strong class="font-semibold text-zinc-950">English:</strong> Professional Working Proficiency</li>
+      </ul>
+    </section>
+
+    <!-- Key Skills -->
+    <section class="space-y-2">
+      <h2 class="text-base font-bold uppercase tracking-wider text-zinc-950">
+        Key Skills
+      </h2>
+      <ul class="list-disc list-inside text-xs text-zinc-800 leading-relaxed pl-1 space-y-1">
+        <li>
+          <strong class="font-semibold text-zinc-950">Mathematics &amp; Teaching:</strong> Curriculum Instruction, Differentiated Learning, Classroom Management (100+ Students), Student Assessment, Problem Solving.
+        </li>
+        <li>
+          <strong class="font-semibold text-zinc-950">Software &amp; IT:</strong> Microsoft Office, Google Workspace, Adobe Creative Suite (Illustrator, Photoshop), Unity, C#, 3ds Max, Equipment Maintenance.
+        </li>
+        <li>
+          <strong class="font-semibold text-zinc-950">Design &amp; Fabrication:</strong> Industrial CO2 Laser Cutting &amp; Engraving, 2D/3D Design, Woodworking.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Experience -->
+    <section class="space-y-4">
+      <h2 class="text-base font-bold uppercase tracking-wider text-zinc-950">
+        Experience
+      </h2>
+
+      <!-- Role 1: Makani -->
+      <div class="space-y-1.5">
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between text-xs">
+          <h3 class="font-bold text-zinc-950">
+            Lead Instructor &amp; Operational Assistant &bull; Makani Project (UNICEF / Islamic Center)
+          </h3>
+          <span class="text-zinc-700 italic font-medium">Oct 2025 – Jan 2026 | Amman, Jordan</span>
+        </div>
+        <ul class="list-disc list-inside text-xs text-zinc-800 leading-relaxed pl-1 space-y-1">
+          <li>Supported the Center Director in day-to-day operations, administrative tasks, and logistics.</li>
+          <li>Taught mathematics and basic reading to over 100 students (Grades 1–3) across 11 classes.</li>
+          <li>Handled center equipment maintenance (computers, printers, classroom facilities).</li>
+          <li>Maintained student records and spreadsheets; handled event photography and documentation.</li>
+        </ul>
+      </div>
+
+      <!-- Role 2: MathPiSalah -->
+      <div class="space-y-1.5">
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between text-xs">
+          <h3 class="font-bold text-zinc-950">
+            Math Content Creator &amp; Tutor &bull; MathPiSalah
+          </h3>
+          <span class="text-zinc-700 italic font-medium">Aug 2022 – Present | Amman, Jordan</span>
+        </div>
+        <ul class="list-disc list-inside text-xs text-zinc-800 leading-relaxed pl-1 space-y-1">
+          <li>Produce educational math videos and reels on YouTube and Instagram (<a href="https://www.instagram.com/mathpisalah/" target="_blank" class="text-blue-600 hover:underline">@MathPiSalah</a>).</li>
+          <li>Provide private mathematics tutoring for school students.</li>
+        </ul>
+      </div>
+
+      <!-- Role 3: Zaytune Games -->
+      <div class="space-y-1.5">
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between text-xs">
+          <h3 class="font-bold text-zinc-950">
+            Solo Game Developer &bull; Zaytune Games
+          </h3>
+          <span class="text-zinc-700 italic font-medium">June 2018 – Present | Amman, Jordan</span>
+        </div>
+        <ul class="list-disc list-inside text-xs text-zinc-800 leading-relaxed pl-1 space-y-1">
+          <li>Developed and published the mobile game <a href="https://play.google.com/store/apps/details?id=com.ZaytuneGames.Puzzleme&hl=en" target="_blank" class="text-blue-600 hover:underline font-semibold">PuzzleMe</a> on Google Play using Unity (C#).</li>
+          <li>Won 3rd Place at The Very Big Indie Pitch (Pocket Gamer) at Jordan Gaming Summit 2018.</li>
+          <li>Published commercial game tools and assets on the Unity Asset Store.</li>
+        </ul>
+      </div>
+
+      <!-- Role 4: Woodworking -->
+      <div class="space-y-1.5">
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between text-xs">
+          <h3 class="font-bold text-zinc-950">
+            Co-Owner &amp; Designer &bull; Woodworking &amp; Laser Workshop
+          </h3>
+          <span class="text-zinc-700 italic font-medium">2020 – Present | Amman, Jordan</span>
+        </div>
+        <ul class="list-disc list-inside text-xs text-zinc-800 leading-relaxed pl-1 space-y-1">
+          <li>Co-manage a workshop producing custom wooden products, antique props, engraved items, and puzzles.</li>
+          <li>Create 2D/3D design files and operate industrial CO2 laser cutting and engraving machinery.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Reference -->
+    <section class="pt-2 border-t border-zinc-200">
+      <h2 class="text-base font-bold uppercase tracking-wider text-zinc-950 mb-1">
+        Reference
+      </h2>
+      <p class="text-xs text-zinc-800">
+        &bull; <strong class="font-semibold text-zinc-950">Rola Alqutaitat</strong> &bull; Center Director, Makani Project (Al-Jawfah) &bull; <a href="tel:+962790557245" class="hover:underline font-medium">+962 7 9055 7245</a>
+      </p>
+    </section>
+
+  </main>
+
+
+  <!-- ========================================================================= -->
+  <!-- ARABIC VERSION (RTL) -->
+  <!-- ========================================================================= -->
+  <main id="cvAr" dir="rtl" class="cv-paper font-arabic hidden max-w-4xl mx-auto bg-white rounded-2xl p-8 sm:p-12 shadow-2xl border border-zinc-200/80 space-y-6 text-right">
+    
+    <!-- Header -->
+    <header class="flex flex-col sm:flex-row justify-between items-start gap-4 pb-6 border-b border-zinc-200">
+      <div>
+        <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-950 mb-1">
+          صلاح الدين أبو علي
+        </h1>
+        <p class="text-sm font-semibold text-zinc-800 mb-1">
+          معلم رياضيات &bull; مطور ألعاب &bull; صانع ومصمم
+        </p>
+        <p class="text-xs text-zinc-700">
+          عمان، الأردن &bull; الجنسية: فلسطيني
+        </p>
+      </div>
+
+      <div class="text-right sm:text-left text-xs space-y-1 font-medium text-zinc-800" dir="ltr">
+        <div>
+          <a href="tel:+962789423717" class="hover:text-black hover:underline font-semibold">+962 7 8942 3717</a>
+        </div>
+        <div>
+          <a href="mailto:SalahAlDin.AbuAli@gmail.com" class="hover:text-black hover:underline text-blue-600">SalahAlDin.AbuAli@gmail.com</a>
+        </div>
+        <div>
+          <a href="https://salah-abu-ali.github.io/" class="hover:text-black hover:underline text-blue-600 font-semibold">Portfolio (salah-abu-ali.github.io)</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Education -->
+    <section class="space-y-2">
+      <h2 class="text-base font-bold text-zinc-950 flex items-center gap-2">
+        التعليم
+      </h2>
+      <ul class="list-disc list-inside text-xs text-zinc-800 leading-relaxed pr-1">
+        <li>
+          <strong class="font-semibold text-zinc-950">بكالوريوس في الرياضيات</strong> &mdash; الجامعة الهاشمية (يناير 2022)  
+          <span class="text-zinc-600 block pr-5 mt-0.5 font-medium">التقدير: جيد جداً</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- Languages -->
+    <section class="space-y-2">
+      <h2 class="text-base font-bold text-zinc-950">
+        اللغات
+      </h2>
+      <ul class="list-disc list-inside text-xs text-zinc-800 leading-relaxed pr-1 space-y-0.5">
+        <li><strong class="font-semibold text-zinc-950">العربية:</strong> اللغة الأم</li>
+        <li><strong class="font-semibold text-zinc-950">الإنجليزية:</strong> إتقان مهني ممتاز</li>
+      </ul>
+    </section>
+
+    <!-- Key Skills -->
+    <section class="space-y-2">
+      <h2 class="text-base font-bold text-zinc-950">
+        المهارات الأساسية
+      </h2>
+      <ul class="list-disc list-inside text-xs text-zinc-800 leading-relaxed pr-1 space-y-1">
+        <li>
+          <strong class="font-semibold text-zinc-950">الرياضيات والتعليم:</strong> تدريس المناهج الدراسية، مراعاة الفروق الفردية، إدارة الصفوف، التقييم والمتابعة الأكاديمية، حل المشكلات.
+        </li>
+        <li>
+          <strong class="font-semibold text-zinc-950">البرمجيات وتكنولوجيا المعلومات:</strong> حزمة Microsoft Office، أدوات Google Workspace، برامج Adobe للتصميم، محرك ألعاب Unity، لغة C#، برنامج 3ds Max، الصيانة الفنية للأجهزة المختلفة.
+        </li>
+        <li>
+          <strong class="font-semibold text-zinc-950">التصميم والتصنيع الرقمي:</strong> التشغيل والقص والنقش بالليزر الصناعي (CO2 Laser)، التصميم ثنائي وثلاثي الأبعاد (2D/3D)، الأعمال الخشبية.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Experience -->
+    <section class="space-y-4">
+      <h2 class="text-base font-bold text-zinc-950">
+        الخبرات العملية
+      </h2>
+
+      <!-- Role 1: Makani -->
+      <div class="space-y-1.5">
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between text-xs">
+          <h3 class="font-bold text-zinc-950">
+            معلم رياضيات ومساعد تشغيلي وإداري &bull; مشروع مكاني (اليونيسيف / جمعية المركز الإسلامي)
+          </h3>
+          <span class="text-zinc-700 italic font-medium">أكتوبر 2025 – يناير 2026 | عمان، الأردن</span>
+        </div>
+        <ul class="list-disc list-inside text-xs text-zinc-800 leading-relaxed pr-1 space-y-1">
+          <li>المساعد المباشر لمديرة المركز في متابعة وحل التحديات الإدارية، التشغيلية، واللوجستية اليومية.</li>
+          <li>تدريس مادة الرياضيات ومبادئ القراءة الأساسية لأكثر من 100 طالب (الصفوف 1-3) موزعين على 11 شعبة صفية.</li>
+          <li>تولي أعمال الصيانة الفنية المباشرة للحواسيب، الطابعات، وتجهيزات الصفوف داخل المركز لمنع توقف الأنشطة.</li>
+          <li>إعداد وتنظيم جداول حضور الطلاب والتقارير الإدارية، وتوثيق فعاليات وأنشطة المركز بالصور والفيديو.</li>
+        </ul>
+      </div>
+
+      <!-- Role 2: MathPiSalah -->
+      <div class="space-y-1.5">
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between text-xs">
+          <h3 class="font-bold text-zinc-950">
+            صانع محتوى تعليمي ومعلم خصوصي &bull; MathPiSalah
+          </h3>
+          <span class="text-zinc-700 italic font-medium">أغسطس 2022 – حتى الآن | عمان، الأردن</span>
+        </div>
+        <ul class="list-disc list-inside text-xs text-zinc-800 leading-relaxed pr-1 space-y-1">
+          <li>إعداد ونشر مقاطع فيديو تعليمية قصيرة عبر يوتيوب وإنستغرام (<a href="https://www.instagram.com/mathpisalah/" target="_blank" class="text-blue-600 hover:underline font-semibold">@MathPiSalah</a>) لشرح منهاج الرياضيات بأسلوب مرئي مبسط.</li>
+          <li>تقديم دروس تقوية وتأسيس فردية في الرياضيات لطلاب المدارس.</li>
+        </ul>
+      </div>
+
+      <!-- Role 3: Zaytune Games -->
+      <div class="space-y-1.5">
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between text-xs">
+          <h3 class="font-bold text-zinc-950">
+            مطور ألعاب مستقل &bull; استوديو Zaytune Games
+          </h3>
+          <span class="text-zinc-700 italic font-medium">يونيو 2018 – حتى الآن | عمان، الأردن</span>
+        </div>
+        <ul class="list-disc list-inside text-xs text-zinc-800 leading-relaxed pr-1 space-y-1">
+          <li>تطوير وبرمجة ونشر لعبة <a href="https://play.google.com/store/apps/details?id=com.ZaytuneGames.Puzzleme&hl=en" target="_blank" class="text-blue-600 hover:underline font-semibold">PuzzleMe</a> على متجر Google Play باستخدام محرك Unity ولغة C# بنظام توليد إجرائي للقطع قائم على الهندسة الكسيرية.</li>
+          <li>الفوز بالمركز الثالث في مسابقة The Very Big Indie Pitch (منظمة Pocket Gamer) ضمن قمة الألعاب الإلكترونية في الأردن 2018.</li>
+          <li>نشر وبيع أدوات برمجية وحزم تطويرية للمطورين على متجر Unity Asset Store.</li>
+        </ul>
+      </div>
+
+      <!-- Role 4: Woodworking -->
+      <div class="space-y-1.5">
+        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between text-xs">
+          <h3 class="font-bold text-zinc-950">
+            شريك مؤسس ومصمم تنفيذي &bull; ورشة الأعمال الخشبية وحفر الليزر
+          </h3>
+          <span class="text-zinc-700 italic font-medium">2020 – حتى الآن | عمان، الأردن</span>
+        </div>
+        <ul class="list-disc list-inside text-xs text-zinc-800 leading-relaxed pr-1 space-y-1">
+          <li>إدارة ورشة متخصصة في إنتاج التحف والمجسمات الخشبية، الهدايا المخصصة، والقطع الفنية وألعاب البازل.</li>
+          <li>تجهيز ملفات القص والتصميم عبر برامج Illustrator و3ds Max، وتشغيل أجهزة الليزر الصناعي (CO2).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Reference -->
+    <section class="pt-2 border-t border-zinc-200">
+      <h2 class="text-base font-bold text-zinc-950 mb-1">
+        المعرّفون
+      </h2>
+      <p class="text-xs text-zinc-800">
+        &bull; <strong class="font-semibold text-zinc-950">رولا القطيطات</strong> &bull; مديرة المركز / معلم أول، مشروع مكاني (فرع الجوفة) &bull; هاتف: <a href="tel:+962790557245" class="hover:underline font-medium" dir="ltr">+962 7 9055 7245</a>
+      </p>
+    </section>
+
+  </main>
+
+  <script>
+    lucide.createIcons();
+
+    function switchLang(lang) {
+      const cvEn = document.getElementById('cvEn');
+      const cvAr = document.getElementById('cvAr');
+      const btnEn = document.getElementById('btnEn');
+      const btnAr = document.getElementById('btnAr');
+
+      if (lang === 'ar') {
+        cvEn.classList.add('hidden');
+        cvAr.classList.remove('hidden');
+
+        btnAr.className = 'px-3 py-1.5 rounded-md transition-all bg-white text-zinc-900 font-semibold shadow-sm font-arabic';
+        btnEn.className = 'px-3 py-1.5 rounded-md transition-all text-zinc-400 hover:text-white';
+        document.title = 'صلاح الدين أبو علي — السيرة الذاتية (CV)';
+      } else {
+        cvAr.classList.add('hidden');
+        cvEn.classList.remove('hidden');
+
+        btnEn.className = 'px-3 py-1.5 rounded-md transition-all bg-white text-zinc-900 font-semibold shadow-sm';
+        btnAr.className = 'px-3 py-1.5 rounded-md transition-all text-zinc-400 hover:text-white font-arabic';
+        document.title = 'Salah Al Deen Abu Ali — Resume / CV';
+      }
+    }
+  </script>
+</body>
+</html>
