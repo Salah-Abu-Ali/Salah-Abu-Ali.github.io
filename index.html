@@ -15,7 +15,7 @@
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -35,119 +35,124 @@
     }
   </script>
 </head>
-<body class="bg-[#111113] text-zinc-200 font-sans leading-relaxed selection:bg-zinc-800 selection:text-white min-h-screen">
+<body class="bg-[#111113] text-zinc-200 font-sans leading-relaxed selection:bg-zinc-800 selection:text-white min-h-screen text-base">
 
-  <!-- Top Navigation -->
+  <!-- Top Navigation (Wider: max-w-5xl) -->
   <header class="border-b border-zinc-800/80 bg-[#111113]/90 backdrop-blur sticky top-0 z-30">
-    <div class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="#" class="font-semibold text-white tracking-tight hover:text-zinc-300 transition-colors">
+    <div class="max-w-5xl mx-auto px-6 h-18 py-4 flex items-center justify-between">
+      <a href="#" class="font-bold text-lg text-white tracking-tight hover:text-zinc-300 transition-colors">
         Salah Abu Ali
       </a>
       
-      <nav class="flex items-center gap-5 text-sm text-zinc-400">
+      <nav class="flex items-center gap-6 text-sm sm:text-base text-zinc-400 font-medium">
         <a href="#work" class="hover:text-white transition-colors">Work</a>
         <a href="#about" class="hover:text-white transition-colors">About</a>
-        <a href="cv.html" class="hover:text-white transition-colors">CV / Resume</a>
+        <a href="cv.html" class="text-zinc-200 hover:text-white transition-colors flex items-center gap-1.5 font-semibold">
+          <i data-lucide="file-text" class="w-4 h-4 text-blue-400"></i>
+          <span>CV / Resume</span>
+        </a>
         <a href="#contact" class="hover:text-white transition-colors">Contact</a>
-        <a href="https://wa.me/962789423717" target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300 font-medium transition-colors flex items-center gap-1">
-          <i data-lucide="message-circle" class="w-4 h-4"></i>
+        <a href="https://wa.me/962789423717" target="_blank" rel="noopener" class="text-emerald-400 hover:text-emerald-300 font-semibold transition-colors flex items-center gap-1.5 ml-1">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.532 2.027.812 3.149.813 3.182 0 5.767-2.584 5.768-5.766-.001-3.182-2.587-5.755-5.768-5.755zm0 10.455c-.958 0-1.895-.262-2.716-.757l-.195-.116-1.394.366.372-1.359-.128-.204a4.673 4.673 0 01-.715-2.619c0-2.58 2.099-4.679 4.68-4.679 2.579 0 4.678 2.099 4.678 4.679 0 2.58-2.099 4.689-4.685 4.689zm8.211-14.869C17.973 0 15.111 0 12.031 0 5.402 0 .016 5.385.016 12.015c0 2.115.553 4.18 1.603 6l-1.619 5.985 6.136-1.608a11.96 11.96 0 005.895 1.543c6.629 0 12.015-5.385 12.015-12.015 0-3.208-1.25-6.223-3.805-8.195z"/></svg>
           <span class="hidden sm:inline">WhatsApp</span>
         </a>
       </nav>
     </div>
   </header>
 
-  <!-- Main Content Container -->
-  <main class="max-w-3xl mx-auto px-6 py-14 space-y-20">
+  <!-- Main Content Container (Wider: max-w-5xl, Bigger Text) -->
+  <main class="max-w-5xl mx-auto px-6 py-16 space-y-24">
 
     <!-- Hero / Intro -->
-    <section class="space-y-6">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">
-        <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+    <section class="space-y-8">
+      <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-mono bg-zinc-900 border border-zinc-800 text-zinc-300">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
         <span>Based in Amman, Jordan &bull; Open for Remote Projects</span>
       </div>
 
-      <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-white leading-tight">
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
         Game Developer, Mathematician &amp; Maker.
       </h1>
 
-      <p class="text-base sm:text-lg text-zinc-300 font-light leading-relaxed">
-        Hi, I'm <strong class="text-white font-medium">Salah</strong> (28, born 1998). I build video games with <strong class="text-white font-medium">Unity and C#</strong>, apply my <strong class="text-white font-medium">degree in mathematics</strong> to simulations and game physics, and run a physical woodworking &amp; CO2 laser fabrication workshop with my brother in Amman.
+      <p class="text-lg sm:text-xl text-zinc-300 font-light leading-relaxed max-w-4xl">
+        Hi, I'm <strong class="text-white font-semibold">Salah</strong> (28, born 1998). I build video games with <strong class="text-white font-semibold">Unity and C#</strong>, apply my <strong class="text-white font-semibold">degree in mathematics</strong> to simulations and game physics, and run a physical woodworking &amp; CO2 laser fabrication workshop with my brother in Amman.
       </p>
 
-      <!-- Key quick highlights -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-sm text-zinc-300 font-mono">
-        <div class="p-3 rounded-lg bg-zinc-900/50 border border-zinc-800/80 flex items-center gap-3">
-          <i data-lucide="gamepad-2" class="w-4 h-4 text-zinc-400 shrink-0"></i>
+      <!-- Key Highlights Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-sm sm:text-base text-zinc-300 font-mono">
+        <div class="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80 flex items-center gap-3.5">
+          <i data-lucide="gamepad-2" class="w-5 h-5 text-zinc-400 shrink-0"></i>
           <span>Game Dev since 2018 (Unity)</span>
         </div>
-        <div class="p-3 rounded-lg bg-zinc-900/50 border border-zinc-800/80 flex items-center gap-3">
-          <i data-lucide="graduation-cap" class="w-4 h-4 text-zinc-400 shrink-0"></i>
+        <div class="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80 flex items-center gap-3.5">
+          <i data-lucide="graduation-cap" class="w-5 h-5 text-zinc-400 shrink-0"></i>
           <span>B.Sc. Mathematics (Jan 2022)</span>
         </div>
-        <div class="p-3 rounded-lg bg-zinc-900/50 border border-zinc-800/80 flex items-center gap-3">
-          <i data-lucide="box" class="w-4 h-4 text-zinc-400 shrink-0"></i>
+        <div class="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80 flex items-center gap-3.5">
+          <i data-lucide="box" class="w-5 h-5 text-zinc-400 shrink-0"></i>
           <span>3ds Max 3D artist since 2010</span>
         </div>
-        <div class="p-3 rounded-lg bg-zinc-900/50 border border-zinc-800/80 flex items-center gap-3">
-          <i data-lucide="hammer" class="w-4 h-4 text-zinc-400 shrink-0"></i>
+        <div class="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80 flex items-center gap-3.5">
+          <i data-lucide="hammer" class="w-5 h-5 text-zinc-400 shrink-0"></i>
           <span>CO2 Laser Workshop Co-Owner</span>
         </div>
       </div>
 
-      <!-- Quick action links -->
-      <div class="flex flex-wrap items-center gap-3 pt-4 text-sm">
-        <a href="#contact" class="px-4 py-2 rounded-md bg-white text-black font-medium hover:bg-zinc-200 transition-colors">
-          Get in touch
+      <!-- Quick Action Buttons (With Icons on Every Button) -->
+      <div class="flex flex-wrap items-center gap-3.5 pt-4 text-sm sm:text-base">
+        <a href="#contact" class="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-zinc-200 transition-colors flex items-center gap-2 shadow-sm">
+          <i data-lucide="mail" class="w-4 h-4 text-zinc-800"></i>
+          <span>Get in touch</span>
         </a>
-        <a href="cv.html" class="px-4 py-2 rounded-md bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white transition-colors flex items-center gap-2">
+        <a href="cv.html" class="px-5 py-3 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white font-semibold transition-colors flex items-center gap-2">
           <i data-lucide="file-text" class="w-4 h-4 text-blue-400"></i>
           <span>View CV (EN/AR)</span>
         </a>
-        <a href="https://play.google.com/store/apps/details?id=com.ZaytuneGames.Puzzleme&hl=en" target="_blank" rel="noopener" class="px-4 py-2 rounded-md bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white transition-colors flex items-center gap-2">
+        <a href="https://play.google.com/store/apps/details?id=com.ZaytuneGames.Puzzleme&hl=en" target="_blank" rel="noopener" class="px-5 py-3 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white font-medium transition-colors flex items-center gap-2">
           <i data-lucide="play" class="w-4 h-4 text-emerald-400"></i>
           <span>Try PuzzleMe Demo</span>
         </a>
-        <a href="https://wa.me/962789423717" target="_blank" rel="noopener" class="px-4 py-2 rounded-md bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white transition-colors flex items-center gap-2">
-          <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+        <a href="https://wa.me/962789423717" target="_blank" rel="noopener" class="px-5 py-3 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 text-white font-medium transition-colors flex items-center gap-2">
+          <svg class="w-4 h-4 text-emerald-400 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.532 2.027.812 3.149.813 3.182 0 5.767-2.584 5.768-5.766-.001-3.182-2.587-5.755-5.768-5.755zm0 10.455c-.958 0-1.895-.262-2.716-.757l-.195-.116-1.394.366.372-1.359-.128-.204a4.673 4.673 0 01-.715-2.619c0-2.58 2.099-4.679 4.68-4.679 2.579 0 4.678 2.099 4.678 4.679 0 2.58-2.099 4.689-4.685 4.689zm8.211-14.869C17.973 0 15.111 0 12.031 0 5.402 0 .016 5.385.016 12.015c0 2.115.553 4.18 1.603 6l-1.619 5.985 6.136-1.608a11.96 11.96 0 005.895 1.543c6.629 0 12.015-5.385 12.015-12.015 0-3.208-1.25-6.223-3.805-8.195z"/></svg>
           <span>WhatsApp Chat</span>
         </a>
       </div>
     </section>
 
     <!-- Work / Projects Section -->
-    <section id="work" class="space-y-8">
+    <section id="work" class="space-y-10">
       <div>
-        <h2 class="text-2xl font-bold text-white tracking-tight mb-2">Featured Work</h2>
-        <p class="text-sm text-zinc-400">Games, commercial tools, and physical craftsmanship.</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-2">Featured Work</h2>
+        <p class="text-base text-zinc-400">Games, commercial tools, and physical craftsmanship.</p>
       </div>
 
-      <div class="space-y-6">
+      <div class="space-y-8">
 
         <!-- Project 1: PuzzleMe Digital -->
-        <article class="p-6 rounded-xl bg-zinc-900/40 border border-zinc-800 space-y-4 hover:border-zinc-700 transition-colors">
-          <div class="flex items-center justify-between text-xs font-mono text-zinc-500">
-            <span class="text-emerald-400 font-medium">FLAGSHIP GAME &bull; UNITY / C#</span>
+        <article class="p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800 space-y-5 hover:border-zinc-700 transition-colors">
+          <div class="flex items-center justify-between text-xs sm:text-sm font-mono text-zinc-500">
+            <span class="text-emerald-400 font-semibold tracking-wide">FLAGSHIP GAME &bull; UNITY / C#</span>
             <span>Android &bull; Zaytune Games</span>
           </div>
 
-          <h3 class="text-xl font-bold text-white">
+          <h3 class="text-2xl sm:text-3xl font-bold text-white">
             PuzzleMe: Fractal Jigsaw Puzzle
           </h3>
 
-          <p class="text-sm text-zinc-300 leading-relaxed font-light">
+          <p class="text-base sm:text-lg text-zinc-300 leading-relaxed font-light">
             My magnum opus and most complex project to date. Unlike standard jigsaw puzzles with simple tabs, PuzzleMe uses <strong>recursive fractal curves</strong> to generate completely unique, mathematically interlocking puzzle pieces. Built with Unity, C#, and custom shaders, optimized for smooth performance on mobile devices.
           </p>
 
-          <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-400">
-            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Fractal Geometry</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Unity C#</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Custom Shaders</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Procedural Generation</span>
+          <div class="flex flex-wrap gap-2 text-xs sm:text-sm font-mono text-zinc-400">
+            <span class="px-3 py-1.5 rounded-lg bg-zinc-800/60 border border-zinc-700/60">Fractal Geometry</span>
+            <span class="px-3 py-1.5 rounded-lg bg-zinc-800/60 border border-zinc-700/60">Unity C#</span>
+            <span class="px-3 py-1.5 rounded-lg bg-zinc-800/60 border border-zinc-700/60">Custom Shaders</span>
+            <span class="px-3 py-1.5 rounded-lg bg-zinc-800/60 border border-zinc-700/60">Procedural Generation</span>
           </div>
 
-          <div class="pt-2 flex items-center gap-4 text-sm font-medium">
-            <a href="https://play.google.com/store/apps/details?id=com.ZaytuneGames.Puzzleme&hl=en" target="_blank" rel="noopener" class="text-white hover:underline flex items-center gap-1">
+          <div class="pt-3 flex items-center gap-4 text-base font-semibold">
+            <a href="https://play.google.com/store/apps/details?id=com.ZaytuneGames.Puzzleme&hl=en" target="_blank" rel="noopener" class="text-white hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+              <i data-lucide="play" class="w-4 h-4 text-emerald-400"></i>
               <span>View on Google Play</span>
               <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
             </a>
@@ -155,59 +160,60 @@
         </article>
 
         <!-- Project 2: PuzzleMe JO Physical Workshop -->
-        <article class="p-6 rounded-xl bg-zinc-900/40 border border-zinc-800 space-y-4 hover:border-zinc-700 transition-colors">
-          <div class="flex items-center justify-between text-xs font-mono text-zinc-500">
-            <span class="text-amber-400 font-medium">PHYSICAL FABRICATION &bull; CO2 LASER</span>
+        <article class="p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800 space-y-5 hover:border-zinc-700 transition-colors">
+          <div class="flex items-center justify-between text-xs sm:text-sm font-mono text-zinc-500">
+            <span class="text-amber-400 font-semibold tracking-wide">PHYSICAL FABRICATION &bull; CO2 LASER</span>
             <span>Amman, Jordan</span>
           </div>
 
-          <h3 class="text-xl font-bold text-white">
+          <h3 class="text-2xl sm:text-3xl font-bold text-white">
             PuzzleMe JO: Wooden Laser Puzzles
           </h3>
 
-          <p class="text-sm text-zinc-300 leading-relaxed font-light">
+          <p class="text-base sm:text-lg text-zinc-300 leading-relaxed font-light">
             Bringing mathematical algorithms into tangible real life. My brother and I run a woodworking shop in Amman equipped with an industrial CO2 laser cutting machine. We turn complex fractal patterns and artistic illustrations into precision-cut wooden jigsaw puzzles, designed using Adobe Illustrator, 3ds Max, and LightBurn.
           </p>
 
-          <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-400">
-            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">CO2 Laser Cutting</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">LightBurn</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Illustrator</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Hardwood Finishing</span>
+          <div class="flex flex-wrap gap-2 text-xs sm:text-sm font-mono text-zinc-400">
+            <span class="px-3 py-1.5 rounded-lg bg-zinc-800/60 border border-zinc-700/60">CO2 Laser Cutting</span>
+            <span class="px-3 py-1.5 rounded-lg bg-zinc-800/60 border border-zinc-700/60">LightBurn</span>
+            <span class="px-3 py-1.5 rounded-lg bg-zinc-800/60 border border-zinc-700/60">Illustrator</span>
+            <span class="px-3 py-1.5 rounded-lg bg-zinc-800/60 border border-zinc-700/60">Hardwood Finishing</span>
           </div>
 
-          <div class="pt-2 flex items-center gap-5 text-sm font-medium">
-            <a href="https://puzzlemejo.github.io/" target="_blank" rel="noopener" class="text-white hover:underline flex items-center gap-1">
+          <div class="pt-3 flex flex-wrap items-center gap-6 text-base font-semibold">
+            <a href="https://puzzlemejo.github.io/" target="_blank" rel="noopener" class="text-white hover:text-amber-400 transition-colors flex items-center gap-1.5">
+              <i data-lucide="shopping-bag" class="w-4 h-4 text-amber-400"></i>
               <span>Visit Online Store</span>
               <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
             </a>
-            <a href="https://www.instagram.com/puzzleme.jo/" target="_blank" rel="noopener" class="text-zinc-400 hover:text-white flex items-center gap-1">
-              <i data-lucide="instagram" class="w-4 h-4"></i>
+            <a href="https://www.instagram.com/puzzleme.jo/" target="_blank" rel="noopener" class="text-zinc-400 hover:text-pink-400 transition-colors flex items-center gap-1.5">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689-.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
               <span>@puzzleme.jo</span>
             </a>
           </div>
         </article>
 
         <!-- Project 3: Unity Assets & Experiments -->
-        <article class="p-6 rounded-xl bg-zinc-900/40 border border-zinc-800 space-y-4 hover:border-zinc-700 transition-colors">
-          <div class="flex items-center justify-between text-xs font-mono text-zinc-500">
-            <span class="text-blue-400 font-medium">TOOLS &amp; SIMULATIONS</span>
+        <article class="p-8 rounded-2xl bg-zinc-900/40 border border-zinc-800 space-y-5 hover:border-zinc-700 transition-colors">
+          <div class="flex items-center justify-between text-xs sm:text-sm font-mono text-zinc-500">
+            <span class="text-blue-400 font-semibold tracking-wide">TOOLS &amp; SIMULATIONS</span>
             <span>Unity Asset Store</span>
           </div>
 
-          <h3 class="text-xl font-bold text-white">
+          <h3 class="text-2xl sm:text-3xl font-bold text-white">
             Commercial Unity Assets &amp; Math Simulations
           </h3>
 
-          <p class="text-sm text-zinc-300 leading-relaxed font-light">
+          <p class="text-base sm:text-lg text-zinc-300 leading-relaxed font-light">
             I build and sell modular game tools and developer assets for Unity. I also write simulations to test and visualize concepts in linear algebra, vector calculus, kinematics, and particle systems directly inside 3D environments.
           </p>
 
-          <div class="flex flex-wrap gap-2 text-xs font-mono text-zinc-400">
-            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">C# Architecture</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Vector Math</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Physics Solvers</span>
-            <span class="px-2.5 py-1 rounded bg-zinc-800/60 border border-zinc-700/60">Editor Scripting</span>
+          <div class="flex flex-wrap gap-2 text-xs sm:text-sm font-mono text-zinc-400">
+            <span class="px-3 py-1.5 rounded-lg bg-zinc-800/60 border border-zinc-700/60">C# Architecture</span>
+            <span class="px-3 py-1.5 rounded-lg bg-zinc-800/60 border border-zinc-700/60">Vector Math</span>
+            <span class="px-3 py-1.5 rounded-lg bg-zinc-800/60 border border-zinc-700/60">Physics Solvers</span>
+            <span class="px-3 py-1.5 rounded-lg bg-zinc-800/60 border border-zinc-700/60">Editor Scripting</span>
           </div>
         </article>
 
@@ -215,13 +221,13 @@
     </section>
 
     <!-- About / Background Section -->
-    <section id="about" class="space-y-6">
+    <section id="about" class="space-y-8">
       <div>
-        <h2 class="text-2xl font-bold text-white tracking-tight mb-2">My Story &amp; Background</h2>
-        <p class="text-sm text-zinc-400">How an autodidact background shaped my work.</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-2">My Story &amp; Background</h2>
+        <p class="text-base text-zinc-400">How an autodidact background shaped my work.</p>
       </div>
 
-      <div class="space-y-4 text-sm text-zinc-300 leading-relaxed font-light">
+      <div class="space-y-5 text-base sm:text-lg text-zinc-300 leading-relaxed font-light">
         <p>
           I started my journey with computer graphics back in <strong class="text-white font-medium">2010 at age 12</strong>. Without an internet connection or video tutorials, I learned <strong>3ds Max</strong> cover-to-cover from printed books. That experience gave me an early, hands-on spatial foundation in 3D geometry, polygon topology, and coordinate transformations.
         </p>
@@ -237,154 +243,169 @@
       </div>
 
       <!-- Educational Channels Box -->
-      <div class="p-5 rounded-xl bg-zinc-900/40 border border-zinc-800 space-y-3">
-        <div class="text-white font-medium text-sm flex items-center gap-2">
-          <i data-lucide="video" class="w-4 h-4 text-red-400"></i>
+      <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900/50 border border-zinc-800 space-y-4">
+        <div class="text-white font-semibold text-base sm:text-lg flex items-center gap-2.5">
+          <svg class="w-5 h-5 text-red-500 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
           <span>Educational Math Channels: @MathPiSalah</span>
         </div>
-        <p class="text-xs text-zinc-400 leading-relaxed font-light">
-          I share visual explanations of mathematical concepts, calculus, and game physics on YouTube and Instagram to help learners see the beauty of applied math.
+        <p class="text-sm sm:text-base text-zinc-400 leading-relaxed font-light">
+          I share visual explanations of mathematical concepts, algebra, geometry, and problem solving on YouTube and Instagram to help learners see the beauty of applied math.
         </p>
-        <div class="flex flex-wrap items-center gap-3 pt-1 text-xs font-mono">
-          <a href="https://www.youtube.com/@MathPiSalah" target="_blank" rel="noopener" class="text-red-400 hover:text-red-300 flex items-center gap-1 font-medium">
-            <i data-lucide="youtube" class="w-3.5 h-3.5"></i>
+        <div class="flex flex-wrap items-center gap-4 pt-1 text-sm sm:text-base font-medium">
+          <a href="https://www.youtube.com/@MathPiSalah" target="_blank" rel="noopener" class="text-red-400 hover:text-red-300 flex items-center gap-2">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
             <span>YouTube: @MathPiSalah</span>
           </a>
           <span class="text-zinc-600">&bull;</span>
-          <a href="https://www.instagram.com/mathpisalah/" target="_blank" rel="noopener" class="text-pink-400 hover:text-pink-300 flex items-center gap-1 font-medium">
-            <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
+          <a href="https://www.instagram.com/mathpisalah/" target="_blank" rel="noopener" class="text-pink-400 hover:text-pink-300 flex items-center gap-2">
+            <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689-.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
             <span>Instagram: @mathpisalah</span>
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Skills Matrix -->
-    <section class="space-y-6">
+    <!-- Technical Toolkit -->
+    <section class="space-y-8">
       <div>
-        <h2 class="text-2xl font-bold text-white tracking-tight mb-2">Technical Toolkit</h2>
-        <p class="text-sm text-zinc-400">The software, languages, and tools I use daily.</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-2">Technical Toolkit</h2>
+        <p class="text-base text-zinc-400">The software, languages, and tools I use daily.</p>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-mono">
-        <div class="p-4 rounded-lg bg-zinc-900/30 border border-zinc-800 space-y-2">
-          <div class="text-white font-semibold flex items-center gap-2">
-            <i data-lucide="code" class="w-4 h-4 text-zinc-400"></i>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 text-sm font-mono">
+        <div class="p-5 rounded-xl bg-zinc-900/40 border border-zinc-800 space-y-2.5">
+          <div class="text-white font-bold text-base flex items-center gap-2.5">
+            <i data-lucide="code" class="w-5 h-5 text-zinc-400"></i>
             <span>Game Engineering</span>
           </div>
-          <p class="text-zinc-400 font-sans text-xs">Unity, C#, Gameplay Architecture, Mobile Optimization (Android), Shaders, Physics.</p>
+          <p class="text-zinc-400 font-sans text-sm sm:text-base leading-relaxed">Unity, C#, Gameplay Architecture, Mobile Optimization (Android), Shaders, Physics.</p>
         </div>
 
-        <div class="p-4 rounded-lg bg-zinc-900/30 border border-zinc-800 space-y-2">
-          <div class="text-white font-semibold flex items-center gap-2">
-            <i data-lucide="sigma" class="w-4 h-4 text-zinc-400"></i>
+        <div class="p-5 rounded-xl bg-zinc-900/40 border border-zinc-800 space-y-2.5">
+          <div class="text-white font-bold text-base flex items-center gap-2.5">
+            <i data-lucide="sigma" class="w-5 h-5 text-zinc-400"></i>
             <span>Applied Mathematics</span>
           </div>
-          <p class="text-zinc-400 font-sans text-xs">Linear Algebra (Vectors, Matrices, Quaternions), Fractal Geometry, Kinematics, Discrete Math.</p>
+          <p class="text-zinc-400 font-sans text-sm sm:text-base leading-relaxed">Linear Algebra (Vectors, Matrices, Quaternions), Fractal Geometry, Kinematics, Discrete Math.</p>
         </div>
 
-        <div class="p-4 rounded-lg bg-zinc-900/30 border border-zinc-800 space-y-2">
-          <div class="text-white font-semibold flex items-center gap-2">
-            <i data-lucide="box" class="w-4 h-4 text-zinc-400"></i>
+        <div class="p-5 rounded-xl bg-zinc-900/40 border border-zinc-800 space-y-2.5">
+          <div class="text-white font-bold text-base flex items-center gap-2.5">
+            <i data-lucide="box" class="w-5 h-5 text-zinc-400"></i>
             <span>3D &amp; Visual Design</span>
           </div>
-          <p class="text-zinc-400 font-sans text-xs">3ds Max (since 2010), Polygon Modeling, UV Mapping, Topology, Rendering, Blender.</p>
+          <p class="text-zinc-400 font-sans text-sm sm:text-base leading-relaxed">3ds Max (since 2010), Polygon Modeling, UV Mapping, Topology, Rendering, Blender.</p>
         </div>
 
-        <div class="p-4 rounded-lg bg-zinc-900/30 border border-zinc-800 space-y-2">
-          <div class="text-white font-semibold flex items-center gap-2">
-            <i data-lucide="scissors" class="w-4 h-4 text-zinc-400"></i>
+        <div class="p-5 rounded-xl bg-zinc-900/40 border border-zinc-800 space-y-2.5">
+          <div class="text-white font-bold text-base flex items-center gap-2.5">
+            <i data-lucide="scissors" class="w-5 h-5 text-zinc-400"></i>
             <span>Laser &amp; Fabrication</span>
           </div>
-          <p class="text-zinc-400 font-sans text-xs">Industrial CO2 Laser Cutting, LightBurn, Adobe Illustrator, Woodworking &amp; Materials.</p>
+          <p class="text-zinc-400 font-sans text-sm sm:text-base leading-relaxed">Industrial CO2 Laser Cutting, LightBurn, Adobe Illustrator, Woodworking &amp; Materials.</p>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="space-y-6 pt-6 border-t border-zinc-800">
+    <section id="contact" class="space-y-8 pt-8 border-t border-zinc-800">
       <div>
-        <h2 class="text-2xl font-bold text-white tracking-tight mb-2">Get In Touch</h2>
-        <p class="text-sm text-zinc-400 leading-relaxed max-w-xl">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight mb-2">Get In Touch</h2>
+        <p class="text-base sm:text-lg text-zinc-400 leading-relaxed max-w-2xl">
           I am actively available for <strong class="text-zinc-200">remote game development contracts</strong>, <strong class="text-zinc-200">Unity/C# development</strong>, <strong class="text-zinc-200">math/physics simulations</strong>, or freelance collaboration.
         </p>
       </div>
 
-      <!-- Contact options -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+      <!-- Contact Options Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-base">
         <!-- WhatsApp -->
-        <a href="https://wa.me/962789423717?text=Hello%20Salah,%20I%20saw%20your%20portfolio" target="_blank" rel="noopener" class="p-4 rounded-xl border border-emerald-500/30 bg-emerald-950/20 hover:bg-emerald-950/30 transition-colors flex items-center justify-between group">
-          <div class="flex items-center gap-3">
-            <i data-lucide="message-circle" class="w-5 h-5 text-emerald-400"></i>
+        <a href="https://wa.me/962789423717?text=Hello%20Salah,%20I%20saw%20your%20portfolio" target="_blank" rel="noopener" class="p-5 rounded-2xl border border-emerald-500/30 bg-emerald-950/20 hover:bg-emerald-950/40 transition-colors flex items-center justify-between group">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.532 2.027.812 3.149.813 3.182 0 5.767-2.584 5.768-5.766-.001-3.182-2.587-5.755-5.768-5.755zm0 10.455c-.958 0-1.895-.262-2.716-.757l-.195-.116-1.394.366.372-1.359-.128-.204a4.673 4.673 0 01-.715-2.619c0-2.58 2.099-4.679 4.68-4.679 2.579 0 4.678 2.099 4.678 4.679 0 2.58-2.099 4.689-4.685 4.689zm8.211-14.869C17.973 0 15.111 0 12.031 0 5.402 0 .016 5.385.016 12.015c0 2.115.553 4.18 1.603 6l-1.619 5.985 6.136-1.608a11.96 11.96 0 005.895 1.543c6.629 0 12.015-5.385 12.015-12.015 0-3.208-1.25-6.223-3.805-8.195z"/></svg>
+            </div>
             <div>
               <span class="text-xs text-zinc-400 block font-mono">WhatsApp</span>
-              <span class="text-white font-medium">+962 7 8942 3717</span>
+              <span class="text-white font-semibold">+962 7 8942 3717</span>
             </div>
           </div>
-          <i data-lucide="arrow-up-right" class="w-4 h-4 text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+          <i data-lucide="arrow-up-right" class="w-5 h-5 text-emerald-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
         </a>
 
         <!-- Email -->
-        <a href="mailto:salahaldin.abuali@gmail.com" class="p-4 rounded-xl border border-zinc-800 bg-zinc-900/40 hover:bg-zinc-900/70 transition-colors flex items-center justify-between group">
-          <div class="flex items-center gap-3">
-            <i data-lucide="mail" class="w-5 h-5 text-zinc-300"></i>
+        <a href="mailto:salahaldin.abuali@gmail.com" class="p-5 rounded-2xl border border-zinc-800 bg-zinc-900/40 hover:bg-zinc-900/70 transition-colors flex items-center justify-between group">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-full bg-zinc-800 text-zinc-300 flex items-center justify-center shrink-0">
+              <i data-lucide="mail" class="w-5 h-5"></i>
+            </div>
             <div>
-              <span class="text-xs text-zinc-400 block font-mono">Email</span>
-              <span class="text-white font-medium truncate max-w-[190px]">salahaldin.abuali@gmail.com</span>
+              <span class="text-xs text-zinc-400 block font-mono">Direct Email</span>
+              <span class="text-white font-semibold truncate max-w-[240px] block">salahaldin.abuali@gmail.com</span>
             </div>
           </div>
-          <i data-lucide="arrow-up-right" class="w-4 h-4 text-zinc-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
+          <i data-lucide="arrow-up-right" class="w-5 h-5 text-zinc-400 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
         </a>
       </div>
 
-      <!-- Action buttons & social links -->
-      <div class="flex flex-wrap items-center gap-3 text-xs font-mono pt-2">
-        <a href="cv.html" class="px-4 py-2.5 rounded bg-white text-black font-semibold hover:bg-zinc-200 transition-colors flex items-center gap-2">
-          <i data-lucide="file-text" class="w-3.5 h-3.5"></i>
+      <!-- Action Buttons & Social Links (All with icons) -->
+      <div class="flex flex-wrap items-center gap-3.5 text-sm sm:text-base font-medium pt-2">
+        <a href="cv.html" class="px-5 py-3 rounded-lg bg-white text-black font-semibold hover:bg-zinc-200 transition-colors flex items-center gap-2 shadow-sm">
+          <i data-lucide="file-text" class="w-4 h-4 text-zinc-900"></i>
           <span>View Online CV (EN/AR)</span>
         </a>
 
-        <button id="copyEmailBtn" class="px-4 py-2.5 rounded bg-zinc-800 hover:bg-zinc-700 text-white font-medium transition-colors flex items-center gap-2">
-          <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+        <button id="copyEmailBtn" class="px-5 py-3 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-white font-medium transition-colors flex items-center gap-2">
+          <i data-lucide="copy" class="w-4 h-4"></i>
           <span id="copyBtnText">Copy Email</span>
         </button>
 
-        <a href="tel:+962789423717" class="px-4 py-2.5 rounded bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 hover:text-white transition-colors flex items-center gap-1.5">
-          <i data-lucide="phone" class="w-3.5 h-3.5"></i>
+        <a href="tel:+962789423717" class="px-5 py-3 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 hover:text-white transition-colors flex items-center gap-2">
+          <i data-lucide="phone" class="w-4 h-4 text-zinc-400"></i>
           <span>Call: +962 7 8942 3717</span>
         </a>
 
-        <a href="https://www.facebook.com/SalahAlDin.AbuAli" target="_blank" rel="noopener" class="px-4 py-2.5 rounded bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 hover:text-white transition-colors flex items-center gap-1.5">
-          <i data-lucide="facebook" class="w-3.5 h-3.5 text-blue-400"></i>
-          <span>Facebook</span>
-        </a>
-
-        <a href="https://github.com/Salah-Abu-Ali" target="_blank" rel="noopener" class="px-4 py-2.5 rounded bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 hover:text-white transition-colors flex items-center gap-1.5">
-          <i data-lucide="github" class="w-3.5 h-3.5"></i>
-          <span>GitHub</span>
+        <!-- Facebook Button with Crisp Vector Icon -->
+        <a href="https://www.facebook.com/SalahAlDin.AbuAli" target="_blank" rel="noopener" class="px-5 py-3 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 text-zinc-300 hover:text-white transition-colors flex items-center gap-2">
+          <svg class="w-4 h-4 fill-current text-blue-500" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span>Facebook Profile</span>
         </a>
       </div>
 
-      <div id="copyToast" class="hidden text-xs font-mono bg-zinc-800 border border-zinc-700 text-white px-3 py-1.5 rounded inline-flex items-center gap-2">
-        <i data-lucide="check" class="w-3.5 h-3.5 text-emerald-400"></i>
+      <div id="copyToast" class="hidden text-sm font-mono bg-zinc-800 border border-zinc-700 text-white px-4 py-2 rounded-lg inline-flex items-center gap-2">
+        <i data-lucide="check" class="w-4 h-4 text-emerald-400"></i>
         <span>Copied salahaldin.abuali@gmail.com to clipboard!</span>
       </div>
     </section>
 
   </main>
 
-  <!-- Clean Footer -->
-  <footer class="border-t border-zinc-800/80 mt-20 py-10 text-xs font-mono text-zinc-500">
-    <div class="max-w-3xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+  <!-- Clean Footer (Wider: max-w-5xl, No GitHub link as requested) -->
+  <footer class="border-t border-zinc-800/80 mt-24 py-12 text-sm text-zinc-500">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
       <div>
         <span>&copy; 2026 Salah Abu Ali &bull; Amman, Jordan</span>
       </div>
-      <div class="flex items-center gap-5">
-        <a href="https://wa.me/962789423717" target="_blank" rel="noopener" class="hover:text-emerald-400 transition-colors">WhatsApp</a>
-        <a href="https://www.youtube.com/@MathPiSalah" target="_blank" rel="noopener" class="hover:text-red-400 transition-colors">YouTube</a>
-        <a href="https://www.instagram.com/mathpisalah/" target="_blank" rel="noopener" class="hover:text-pink-400 transition-colors">Instagram</a>
-        <a href="https://github.com/Salah-Abu-Ali" target="_blank" rel="noopener" class="hover:text-white transition-colors">GitHub</a>
-        <a href="#" class="hover:text-white transition-colors">Top &uarr;</a>
+      <div class="flex flex-wrap items-center gap-6 font-medium">
+        <a href="https://wa.me/962789423717" target="_blank" rel="noopener" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.976.532 2.027.812 3.149.813 3.182 0 5.767-2.584 5.768-5.766-.001-3.182-2.587-5.755-5.768-5.755zm0 10.455c-.958 0-1.895-.262-2.716-.757l-.195-.116-1.394.366.372-1.359-.128-.204a4.673 4.673 0 01-.715-2.619c0-2.58 2.099-4.679 4.68-4.679 2.579 0 4.678 2.099 4.678 4.679 0 2.58-2.099 4.689-4.685 4.689zm8.211-14.869C17.973 0 15.111 0 12.031 0 5.402 0 .016 5.385.016 12.015c0 2.115.553 4.18 1.603 6l-1.619 5.985 6.136-1.608a11.96 11.96 0 005.895 1.543c6.629 0 12.015-5.385 12.015-12.015 0-3.208-1.25-6.223-3.805-8.195z"/></svg>
+          <span>WhatsApp</span>
+        </a>
+        <a href="https://www.youtube.com/@MathPiSalah" target="_blank" rel="noopener" class="hover:text-red-400 transition-colors flex items-center gap-1.5">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+          <span>YouTube</span>
+        </a>
+        <a href="https://www.instagram.com/mathpisalah/" target="_blank" rel="noopener" class="hover:text-pink-400 transition-colors flex items-center gap-1.5">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689-.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          <span>Instagram</span>
+        </a>
+        <a href="https://www.facebook.com/SalahAlDin.AbuAli" target="_blank" rel="noopener" class="hover:text-blue-400 transition-colors flex items-center gap-1.5">
+          <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span>Facebook</span>
+        </a>
+        <a href="#" class="hover:text-white transition-colors flex items-center gap-1">
+          <i data-lucide="arrow-up" class="w-4 h-4"></i>
+          <span>Top</span>
+        </a>
       </div>
     </div>
   </footer>
